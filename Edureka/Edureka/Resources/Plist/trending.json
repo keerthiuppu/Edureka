@@ -1,0 +1,15 @@
+{
+    "Trending":[
+    {
+        "courseId":"1",
+        "courseName":"Big Data and Hadoop",
+        "courseImage":"BD-&-H.png",
+        "learners":"67677",
+        "rating":"5",
+        "price":"3999",
+        "OnlineClassTime":"30 Hours",
+        ""
+    }
+    ],
+    "NewNoteWorthy":[]
+}

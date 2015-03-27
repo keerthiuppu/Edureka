@@ -1,0 +1,16 @@
+//
+//  Edureka-Prefix.pch
+//  Edureka
+//
+//  Created by Neeraj Sharma on 17/03/15.
+//  Copyright (c) 2015 KelltonTech Solutions. All rights reserved.
+//
+
+#ifndef Edureka_Edureka_Prefix_pch
+#define Edureka_Edureka_Prefix_pch
+#import "AppDelegate.h"
+#import "Constants.h"
+#import "UIThumbView.h"
+#import "iCarousel.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+#endif

@@ -1,0 +1,15 @@
+# Uncomment this line to define a global platform for your project
+# platform :ios, ‘7.0’
+
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'Edureka' do
+pod 'AFNetworking', '~> 2.3'
+pod 'iCarousel', '~> 1.8'
+pod 'SDWebImage', '~> 3.7'
+end
+
+target 'EdurekaTests' do
+
+end
+

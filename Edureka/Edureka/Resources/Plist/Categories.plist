@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>categoryId</key>
+		<string>1</string>
+		<key>categoryName</key>
+		<string>Big Data Analytics</string>
+		<key>imageUrl</key>
+		<string>http://acdn.edureka.co/img/new-courseicon/Big-Data-Analytics.png</string>
+	</dict>
+    <dict>
+        <key>categoryId</key>
+        <string>2</string>
+        <key>categoryName</key>
+        <string>Big Data NoSQL</string>
+        <key>imageUrl</key>
+        <string>http://acdn.edureka.co/img/new-courseicon/Big-Data-NoSQL.png</string>
+    </dict>
+    <dict>
+        <key>categoryId</key>
+        <string>3</string>
+        <key>categoryName</key>
+        <string>Testing</string>
+        <key>imageUrl</key>
+        <string>http://acdn.edureka.co/img/new-courseicon/testing.png</string>
+    </dict>
+    <dict>
+        <key>categoryId</key>
+        <string>4</string>
+        <key>categoryName</key>
+        <string>Cloud Computing</string>
+        <key>imageUrl</key>
+        <string>http://acdn.edureka.co/img/new-courseicon/Cloud-Computing.png</string>
+    </dict>
+    <dict>
+        <key>categoryId</key>
+        <string>5</string>
+        <key>categoryName</key>
+        <string>Business Intelligence</string>
+        <key>imageUrl</key>
+        <string>http://acdn.edureka.co/img/new-courseicon/Business-Intelligence.png</string>
+    </dict>
+    <dict>
+        <key>categoryId</key>
+        <string>6</string>
+        <key>categoryName</key>
+        <string>System &amp; Architecture</string>
+        <key>imageUrl</key>
+        <string>http://acdn.edureka.co/img/new-courseicon/Systems-&amp;-Architecture.png</string>
+    </dict>
+    <dict>
+        <key>categoryId</key>
+        <string>7</string>
+        <key>categoryName</key>
+        <string>Mobile Development</string>
+        <key>imageUrl</key>
+        <string>http://acdn.edureka.co/img/new-courseicon/Mobile-Development.png</string>
+    </dict>
+</array>
+</plist>

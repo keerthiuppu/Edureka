@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <array>
+        <dict>
+            <key>courseId</key>
+            <string>2</string>
+            <key>courseName</key>
+            <string>Java/J2EE and SOA</string>
+            <key>courseImageUrl</key>
+            <string>http://acdn.edureka.co/img/ajava.png</string>
+        </dict>
+        <dict>
+            <key>courseId</key>
+            <string>3</string>
+            <key>courseName</key>
+            <string>Mastering Python</string>
+            <key>courseImageUrl</key>
+            <string>http://acdn.edureka.co/img/Python-For-Big-Data-Analytics.png</string>
+        </dict>
+        <dict>
+            <key>courseId</key>
+            <string>1</string>
+            <key>courseName</key>
+            <string>Big Data and Hadoop</string>
+            <key>courseImageUrl</key>
+            <string>http://acdn.edureka.co/img/BD-&amp;-H.png</string>
+        </dict>
+        <dict>
+            <key>courseId</key>
+            <string>4</string>
+            <key>courseName</key>
+            <string>Data Science</string>
+            <key>courseImageUrl</key>
+            <string>http://acdn.edureka.co/img/Data-Science.png</string>
+        </dict>
+    </array>
+</plist>
