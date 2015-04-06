@@ -1,21 +1,22 @@
 //
-//  EDMyCourseVC.m
+//  EDCourseListVC.m
 //  Edureka
 //
-//  Created by Neeraj Sharma on 23/03/15.
+//  Created by Neeraj Sharma on 04/04/15.
 //  Copyright (c) 2015 KelltonTech Solutions. All rights reserved.
 //
 
-#import "EDMyCourseVC.h"
-#import "EDMyCourseCell.h"
+#import "EDCourseListVC.h"
+#import "EDCourseCell.h"
 
-@interface EDMyCourseVC ()
+@interface EDCourseListVC ()
 {
-    IBOutlet UITableView* myCourseTableView;
+    IBOutlet UITableView* courseTableView;
 }
+
 @end
 
-@implementation EDMyCourseVC
+@implementation EDCourseListVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -29,21 +30,11 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 #pragma mark - UInavigationBar Configuration
 -(void) configureNavigationBar{
     // [self addRightMenuButton];
-    //[self addLeftMenuButton];
-    self.title = @"My Courses";
+    [self addLeftMenuButton];
+    self.title = @"Linux";
     
     //[self.navigationItem setTitleView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"edurekaLogo"]]];
 }
@@ -62,10 +53,10 @@
 #pragma mark - UI Configuration
 - (void)registerCellsForTableView
 {
-    UINib *nib = [UINib nibWithNibName:@"EDMyCourseCell" bundle:[NSBundle mainBundle]];
-    [myCourseTableView registerNib:nib forCellReuseIdentifier:@"EDMyCourseCell"];
+    UINib *nib = [UINib nibWithNibName:@"EDCourseCell" bundle:[NSBundle mainBundle]];
+    [courseTableView registerNib:nib forCellReuseIdentifier:@"EDCourseCell"];
     
-    [myCourseTableView setTableFooterView:[[UIView alloc] initWithFrame:CGRectZero]];
+    [courseTableView setTableFooterView:[[UIView alloc] initWithFrame:CGRectZero]];
 }
 
 
@@ -77,17 +68,16 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString* cellIdentifier = @"EDMyCourseCell";
-    EDMyCourseCell* cell =[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    static NSString* cellIdentifier = @"EDCourseCell";
+    EDCourseCell* cell =[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 125.0f;
+    return 100.0f;
 }
-
 
 
 @end

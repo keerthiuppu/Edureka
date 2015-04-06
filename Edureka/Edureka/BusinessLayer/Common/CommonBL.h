@@ -11,4 +11,6 @@
 @interface CommonBL : NSObject
 +(CommonBL*)sharedInstance;
 
+-(void) parseAppAuthData:(NSMutableDictionary*) dictionary;
+-(void) showErrorAlertWithMessage:(NSString*) messageStr;
 @end

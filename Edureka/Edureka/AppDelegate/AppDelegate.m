@@ -11,9 +11,10 @@
 #import "EDHomeVC.h"
 #import "EDMyCourseVC.h"
 #import "EDTicketVC.h"
-#import "EDForumVC.h"
-#import "EDMoreVC.h"
-
+#import "EDRedeemVC.h"
+#import "EDSettingsVC.h"
+#import "EDCommunityVC.h"
+#import "EDOperationHandler.h"
 
 @interface AppDelegate ()
 {
@@ -29,6 +30,36 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [self configureNavigationBar];
+    
+    
+    //    NSLocale *locale = [NSLocale currentLocale];
+    //    NSArray *countryArray = [NSLocale ISOCountryCodes];
+    //
+    //    NSMutableArray *sortedCountryArray = [[NSMutableArray alloc] init];
+    //
+    //    for (NSString *countryCode in countryArray) {
+    //
+    //        NSString *displayNameString = [locale displayNameForKey:NSLocaleCountryCode value:countryCode];
+    //        [sortedCountryArray addObject:displayNameString];
+    //        NSString *countryCode = [locale objectForKey:NSLocaleCountryCode];
+    //        NSLog(@"CountryCode=%@ & countryName=%@", countryCode, displayNameString);
+    //    }
+    //
+    //
+    //     NSArray *localeArray  = [NSLocale ISOCountryCodes];
+    //    NSLocale *locale = [NSLocale currentLocale];
+    //    for (NSString *countryCode in localeArray) {
+    //     NSString *displayNameString = [locale displayNameForKey:NSLocaleCountryCode value:countryCode];
+    //        NSLog(@"Country Code=%@ --- Country Name=%@", countryCode, displayNameString);
+    
+    
+    //        NSString *countryCode = [locale objectForKey:NSLocaleCountryCode];
+    //        NSLog(@"CountryCode=%@ & countryName=%@", countryCode);
+    //    }
+    
+    
+    //  [sortedCountryArray sortUsingSelector:@selector(localizedCompare:)];
+    
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     EDWelcomeVC* edWelcomeVC = [[EDWelcomeVC alloc] initWithNibName:@"EDWelcomeVC" bundle:nil];
@@ -60,6 +91,20 @@
     
 }
 
+#pragma mark- Get App Auth Token
+-(void) getAppAthToken
+{
+//    NSMutableDictionary* paramsDict = [[NSMutableDictionary alloc] initWithCapacity:0];
+//    
+//    
+//    
+//    [[EDOperationHandler sharedInstance] getAuthTokenForApp:paramsDict WithCompletionBlock:^(NSMutableDictionary *dict, NSError *error) {
+//        //
+//        if(error)
+//            
+//    }];
+}
+
 #pragma mark UI Configuration
 -(void) configureNavigationBar
 {
@@ -73,12 +118,12 @@
 
 -(void) configureTabBar
 {
-
+    
     EDHomeVC* edHomeVC = [[EDHomeVC alloc] initWithNibName:@"EDHomeVC" bundle:nil];
     EDMyCourseVC* edMyCourseVC = [[EDMyCourseVC alloc] initWithNibName:@"EDMyCourseVC" bundle:nil];
-    EDTicketVC* edTicketVC = [[EDTicketVC alloc] initWithNibName:@"EDTicketVC" bundle:nil];
-    EDForumVC* edForumVC = [[EDForumVC alloc] initWithNibName:@"EDForumVC" bundle:nil];
-    EDMoreVC* edMoreVC = [[EDMoreVC alloc] initWithNibName:@"EDMoreVC" bundle:nil];
+    EDCommunityVC* edCommunityVC = [[EDCommunityVC alloc] initWithNibName:@"EDCommunityVC" bundle:nil];
+    EDRedeemVC* edRedeemVC = [[EDRedeemVC alloc] initWithNibName:@"EDRedeemVC" bundle:nil];
+    EDSettingsVC* edSettingsVC = [[EDSettingsVC alloc] initWithNibName:@"EDSettingsVC" bundle:nil];
     
     edHomeVC.title = @"Home";
     edHomeVC.tabBarItem.image = [UIImage imageNamed:@"home"];
@@ -86,31 +131,30 @@
     edMyCourseVC.title=@"My Courses";
     edMyCourseVC.tabBarItem.image = [UIImage imageNamed:@"myCourse"];
     
-    edTicketVC.title = @"Tickets";
-    edTicketVC.tabBarItem.image = [UIImage imageNamed:@"ticket"];
-
-    edForumVC.title= @"Forum";
-    edForumVC.tabBarItem.image = [UIImage imageNamed:@"forum"];
-
-    edMoreVC.title = @"More";
-    edMoreVC.tabBarItem.image = [UIImage imageNamed:@"more"];
-
+    edCommunityVC.title = @"Community";
+    edCommunityVC.tabBarItem.image = [UIImage imageNamed:@"ticket"];
+    
+    edRedeemVC.title= @"Redeem";
+    edRedeemVC.tabBarItem.image = [UIImage imageNamed:@"forum"];
+    
+    edSettingsVC.title = @"Settings";
+    edSettingsVC.tabBarItem.image = [UIImage imageNamed:@"more"];
+    
     UINavigationController* homeNavControl =[[UINavigationController alloc] initWithRootViewController:edHomeVC];
     UINavigationController* myCourseNavControl =[[UINavigationController alloc] initWithRootViewController:edMyCourseVC];
-    UINavigationController* ticketNavControl =[[UINavigationController alloc] initWithRootViewController:edTicketVC];
-    UINavigationController* forumNavControl =[[UINavigationController alloc] initWithRootViewController:edForumVC];
-    UINavigationController* moreNavControl =[[UINavigationController alloc] initWithRootViewController:edMoreVC];
+    UINavigationController* ticketNavControl =[[UINavigationController alloc] initWithRootViewController:edCommunityVC];
+    UINavigationController* redeemNavControl =[[UINavigationController alloc] initWithRootViewController:edRedeemVC];
+    UINavigationController* settingsNavControl =[[UINavigationController alloc] initWithRootViewController:edSettingsVC];
     
     
     //create an array of all view controllers that will represent the tab at the bottom
-    NSArray *viewControllers = [[NSArray alloc] initWithObjects:homeNavControl, myCourseNavControl,ticketNavControl,forumNavControl, moreNavControl, nil];
+    NSArray *viewControllers = [[NSArray alloc] initWithObjects:homeNavControl, myCourseNavControl,ticketNavControl,redeemNavControl, settingsNavControl, nil];
     //initialize the tab bar controller
     self.tabBarController = [[UITabBarController alloc] init];
     [self.tabBarController setViewControllers:viewControllers];
     [self.window addSubview:self.tabBarController.view];
 }
 
-#pragma mark - Loader
 #pragma mark - Loading Bar
 -(void) showLoadingBar
 {

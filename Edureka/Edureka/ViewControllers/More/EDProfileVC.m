@@ -1,18 +1,18 @@
 //
-//  EDForumVC.m
+//  EDProfileVC.m
 //  Edureka
 //
-//  Created by Neeraj Sharma on 23/03/15.
+//  Created by Neeraj Sharma on 04/04/15.
 //  Copyright (c) 2015 KelltonTech Solutions. All rights reserved.
 //
 
-#import "EDForumVC.h"
+#import "EDProfileVC.h"
 
-@interface EDForumVC ()
+@interface EDProfileVC ()
 
 @end
 
-@implementation EDForumVC
+@implementation EDProfileVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];

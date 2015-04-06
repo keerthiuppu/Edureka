@@ -7,6 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15510BC81ACF126D008CAA88 /* EDCommunityVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 15510BC61ACF126D008CAA88 /* EDCommunityVC.m */; };
+		15510BC91ACF126D008CAA88 /* EDCommunityVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15510BC71ACF126D008CAA88 /* EDCommunityVC.xib */; };
+		15510BCE1ACF1274008CAA88 /* TicketCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 15510BCC1ACF1274008CAA88 /* TicketCell.m */; };
+		15510BCF1ACF1274008CAA88 /* TicketCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15510BCD1ACF1274008CAA88 /* TicketCell.xib */; };
+		15510BD31ACF1599008CAA88 /* EDCourseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 15510BD11ACF1599008CAA88 /* EDCourseCell.m */; };
+		15510BD41ACF1599008CAA88 /* EDCourseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15510BD21ACF1599008CAA88 /* EDCourseCell.xib */; };
+		15510BD81ACF1832008CAA88 /* EDCourseListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 15510BD61ACF1832008CAA88 /* EDCourseListVC.m */; };
+		15510BD91ACF1832008CAA88 /* EDCourseListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15510BD71ACF1832008CAA88 /* EDCourseListVC.xib */; };
+		15510BE31ACF1F95008CAA88 /* EDMyCourseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 15510BE11ACF1F95008CAA88 /* EDMyCourseCell.m */; };
+		15510BE41ACF1F95008CAA88 /* EDMyCourseCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15510BE21ACF1F95008CAA88 /* EDMyCourseCell.xib */; };
+		15510BE81ACF281E008CAA88 /* EDProfileVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 15510BE61ACF281E008CAA88 /* EDProfileVC.m */; };
+		15510BE91ACF281E008CAA88 /* EDProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15510BE71ACF281E008CAA88 /* EDProfileVC.xib */; };
+		15510BED1ACF2967008CAA88 /* EDContentDownloadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 15510BEB1ACF2967008CAA88 /* EDContentDownloadVC.m */; };
+		15510BEE1ACF2967008CAA88 /* EDContentDownloadVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15510BEC1ACF2967008CAA88 /* EDContentDownloadVC.xib */; };
+		15510BF21ACF29F7008CAA88 /* EDAboutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 15510BF01ACF29F7008CAA88 /* EDAboutVC.m */; };
+		15510BF31ACF29F7008CAA88 /* EDAboutVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15510BF11ACF29F7008CAA88 /* EDAboutVC.xib */; };
+		15510BF71ACF2AF3008CAA88 /* EDCommonWebViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 15510BF51ACF2AF3008CAA88 /* EDCommonWebViewVC.m */; };
+		15510BF81ACF2AF3008CAA88 /* EDCommonWebViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15510BF61ACF2AF3008CAA88 /* EDCommonWebViewVC.xib */; };
+		15510BFD1ACF2CE6008CAA88 /* EDRedeemVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 15510BFB1ACF2CE6008CAA88 /* EDRedeemVC.m */; };
+		15510BFE1ACF2CE6008CAA88 /* EDRedeemVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15510BFC1ACF2CE6008CAA88 /* EDRedeemVC.xib */; };
+		15510C021ACF3375008CAA88 /* EDCourseDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 15510C001ACF3375008CAA88 /* EDCourseDetailVC.m */; };
+		15510C031ACF3375008CAA88 /* EDCourseDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15510C011ACF3375008CAA88 /* EDCourseDetailVC.xib */; };
+		15510C071ACF338E008CAA88 /* EDMyCourseDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 15510C051ACF338E008CAA88 /* EDMyCourseDetailVC.m */; };
+		15510C081ACF338E008CAA88 /* EDMyCourseDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15510C061ACF338E008CAA88 /* EDMyCourseDetailVC.xib */; };
+		15510C0D1ACFDB1D008CAA88 /* EDOperationHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 15510C0C1ACFDB1D008CAA88 /* EDOperationHandler.m */; };
 		1554B0D31AC046E600B41289 /* EDWelcomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1554B0D11AC046E600B41289 /* EDWelcomeVC.m */; };
 		1554B0D41AC046E600B41289 /* EDWelcomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1554B0D21AC046E600B41289 /* EDWelcomeVC.xib */; };
 		1554B0D81AC046F700B41289 /* EDRegisterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1554B0D61AC046F700B41289 /* EDRegisterVC.m */; };
@@ -15,16 +40,14 @@
 		1554B0DE1AC0471000B41289 /* EDLoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1554B0DC1AC0471000B41289 /* EDLoginVC.xib */; };
 		1554B0E21AC0473E00B41289 /* EDForgotPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1554B0E01AC0473E00B41289 /* EDForgotPasswordVC.m */; };
 		1554B0E31AC0473E00B41289 /* EDForgotPasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1554B0E11AC0473E00B41289 /* EDForgotPasswordVC.xib */; };
-		1554B0EB1AC047BB00B41289 /* EDForumVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1554B0E91AC047BB00B41289 /* EDForumVC.m */; };
-		1554B0EC1AC047BB00B41289 /* EDForumVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1554B0EA1AC047BB00B41289 /* EDForumVC.xib */; };
 		1554B0F01AC047DA00B41289 /* EDTicketVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1554B0EE1AC047DA00B41289 /* EDTicketVC.m */; };
 		1554B0F11AC047DA00B41289 /* EDTicketVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1554B0EF1AC047DA00B41289 /* EDTicketVC.xib */; };
 		1554B0F51AC047ED00B41289 /* EDMyCourseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1554B0F31AC047ED00B41289 /* EDMyCourseVC.m */; };
 		1554B0F61AC047ED00B41289 /* EDMyCourseVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1554B0F41AC047ED00B41289 /* EDMyCourseVC.xib */; };
 		1554B0FA1AC0480800B41289 /* EDHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1554B0F81AC0480800B41289 /* EDHomeVC.m */; };
 		1554B0FB1AC0480800B41289 /* EDHomeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1554B0F91AC0480800B41289 /* EDHomeVC.xib */; };
-		1554B1011AC050A200B41289 /* EDMoreVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1554B0FF1AC050A200B41289 /* EDMoreVC.m */; };
-		1554B1021AC050A200B41289 /* EDMoreVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1554B1001AC050A200B41289 /* EDMoreVC.xib */; };
+		1554B1011AC050A200B41289 /* EDSettingsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1554B0FF1AC050A200B41289 /* EDSettingsVC.m */; };
+		1554B1021AC050A200B41289 /* EDSettingsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1554B1001AC050A200B41289 /* EDSettingsVC.xib */; };
 		1554B10C1AC06C8500B41289 /* EDCategoriesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 1554B10A1AC06C8500B41289 /* EDCategoriesVC.m */; };
 		1554B10D1AC06C8500B41289 /* EDCategoriesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1554B10B1AC06C8500B41289 /* EDCategoriesVC.xib */; };
 		1554B1101AC06D5800B41289 /* backBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1554B10E1AC06D5800B41289 /* backBtn@2x.png */; };
@@ -71,6 +94,44 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		15510BC51ACF126D008CAA88 /* EDCommunityVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDCommunityVC.h; sourceTree = "<group>"; };
+		15510BC61ACF126D008CAA88 /* EDCommunityVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDCommunityVC.m; sourceTree = "<group>"; };
+		15510BC71ACF126D008CAA88 /* EDCommunityVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EDCommunityVC.xib; sourceTree = "<group>"; };
+		15510BCB1ACF1274008CAA88 /* TicketCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketCell.h; sourceTree = "<group>"; };
+		15510BCC1ACF1274008CAA88 /* TicketCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketCell.m; sourceTree = "<group>"; };
+		15510BCD1ACF1274008CAA88 /* TicketCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TicketCell.xib; sourceTree = "<group>"; };
+		15510BD01ACF1599008CAA88 /* EDCourseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDCourseCell.h; sourceTree = "<group>"; };
+		15510BD11ACF1599008CAA88 /* EDCourseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDCourseCell.m; sourceTree = "<group>"; };
+		15510BD21ACF1599008CAA88 /* EDCourseCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EDCourseCell.xib; sourceTree = "<group>"; };
+		15510BD51ACF1832008CAA88 /* EDCourseListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDCourseListVC.h; sourceTree = "<group>"; };
+		15510BD61ACF1832008CAA88 /* EDCourseListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDCourseListVC.m; sourceTree = "<group>"; };
+		15510BD71ACF1832008CAA88 /* EDCourseListVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EDCourseListVC.xib; sourceTree = "<group>"; };
+		15510BE01ACF1F95008CAA88 /* EDMyCourseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDMyCourseCell.h; sourceTree = "<group>"; };
+		15510BE11ACF1F95008CAA88 /* EDMyCourseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDMyCourseCell.m; sourceTree = "<group>"; };
+		15510BE21ACF1F95008CAA88 /* EDMyCourseCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EDMyCourseCell.xib; sourceTree = "<group>"; };
+		15510BE51ACF281E008CAA88 /* EDProfileVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDProfileVC.h; sourceTree = "<group>"; };
+		15510BE61ACF281E008CAA88 /* EDProfileVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDProfileVC.m; sourceTree = "<group>"; };
+		15510BE71ACF281E008CAA88 /* EDProfileVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EDProfileVC.xib; sourceTree = "<group>"; };
+		15510BEA1ACF2967008CAA88 /* EDContentDownloadVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDContentDownloadVC.h; sourceTree = "<group>"; };
+		15510BEB1ACF2967008CAA88 /* EDContentDownloadVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDContentDownloadVC.m; sourceTree = "<group>"; };
+		15510BEC1ACF2967008CAA88 /* EDContentDownloadVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EDContentDownloadVC.xib; sourceTree = "<group>"; };
+		15510BEF1ACF29F7008CAA88 /* EDAboutVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDAboutVC.h; sourceTree = "<group>"; };
+		15510BF01ACF29F7008CAA88 /* EDAboutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDAboutVC.m; sourceTree = "<group>"; };
+		15510BF11ACF29F7008CAA88 /* EDAboutVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EDAboutVC.xib; sourceTree = "<group>"; };
+		15510BF41ACF2AF3008CAA88 /* EDCommonWebViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDCommonWebViewVC.h; sourceTree = "<group>"; };
+		15510BF51ACF2AF3008CAA88 /* EDCommonWebViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDCommonWebViewVC.m; sourceTree = "<group>"; };
+		15510BF61ACF2AF3008CAA88 /* EDCommonWebViewVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EDCommonWebViewVC.xib; sourceTree = "<group>"; };
+		15510BFA1ACF2CE6008CAA88 /* EDRedeemVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDRedeemVC.h; sourceTree = "<group>"; };
+		15510BFB1ACF2CE6008CAA88 /* EDRedeemVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDRedeemVC.m; sourceTree = "<group>"; };
+		15510BFC1ACF2CE6008CAA88 /* EDRedeemVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EDRedeemVC.xib; sourceTree = "<group>"; };
+		15510BFF1ACF3375008CAA88 /* EDCourseDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDCourseDetailVC.h; sourceTree = "<group>"; };
+		15510C001ACF3375008CAA88 /* EDCourseDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDCourseDetailVC.m; sourceTree = "<group>"; };
+		15510C011ACF3375008CAA88 /* EDCourseDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EDCourseDetailVC.xib; sourceTree = "<group>"; };
+		15510C041ACF338E008CAA88 /* EDMyCourseDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDMyCourseDetailVC.h; sourceTree = "<group>"; };
+		15510C051ACF338E008CAA88 /* EDMyCourseDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDMyCourseDetailVC.m; sourceTree = "<group>"; };
+		15510C061ACF338E008CAA88 /* EDMyCourseDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EDMyCourseDetailVC.xib; sourceTree = "<group>"; };
+		15510C0B1ACFDB1D008CAA88 /* EDOperationHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDOperationHandler.h; sourceTree = "<group>"; };
+		15510C0C1ACFDB1D008CAA88 /* EDOperationHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDOperationHandler.m; sourceTree = "<group>"; };
 		1554B0D01AC046E600B41289 /* EDWelcomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDWelcomeVC.h; sourceTree = "<group>"; };
 		1554B0D11AC046E600B41289 /* EDWelcomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDWelcomeVC.m; sourceTree = "<group>"; };
 		1554B0D21AC046E600B41289 /* EDWelcomeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EDWelcomeVC.xib; sourceTree = "<group>"; };
@@ -83,9 +144,6 @@
 		1554B0DF1AC0473E00B41289 /* EDForgotPasswordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDForgotPasswordVC.h; sourceTree = "<group>"; };
 		1554B0E01AC0473E00B41289 /* EDForgotPasswordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDForgotPasswordVC.m; sourceTree = "<group>"; };
 		1554B0E11AC0473E00B41289 /* EDForgotPasswordVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EDForgotPasswordVC.xib; sourceTree = "<group>"; };
-		1554B0E81AC047BB00B41289 /* EDForumVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDForumVC.h; sourceTree = "<group>"; };
-		1554B0E91AC047BB00B41289 /* EDForumVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDForumVC.m; sourceTree = "<group>"; };
-		1554B0EA1AC047BB00B41289 /* EDForumVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EDForumVC.xib; sourceTree = "<group>"; };
 		1554B0ED1AC047DA00B41289 /* EDTicketVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDTicketVC.h; sourceTree = "<group>"; };
 		1554B0EE1AC047DA00B41289 /* EDTicketVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDTicketVC.m; sourceTree = "<group>"; };
 		1554B0EF1AC047DA00B41289 /* EDTicketVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EDTicketVC.xib; sourceTree = "<group>"; };
@@ -96,9 +154,9 @@
 		1554B0F81AC0480800B41289 /* EDHomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDHomeVC.m; sourceTree = "<group>"; };
 		1554B0F91AC0480800B41289 /* EDHomeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EDHomeVC.xib; sourceTree = "<group>"; };
 		1554B0FC1AC04C6300B41289 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
-		1554B0FE1AC050A200B41289 /* EDMoreVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDMoreVC.h; sourceTree = "<group>"; };
-		1554B0FF1AC050A200B41289 /* EDMoreVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDMoreVC.m; sourceTree = "<group>"; };
-		1554B1001AC050A200B41289 /* EDMoreVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EDMoreVC.xib; sourceTree = "<group>"; };
+		1554B0FE1AC050A200B41289 /* EDSettingsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDSettingsVC.h; sourceTree = "<group>"; };
+		1554B0FF1AC050A200B41289 /* EDSettingsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDSettingsVC.m; sourceTree = "<group>"; };
+		1554B1001AC050A200B41289 /* EDSettingsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EDSettingsVC.xib; sourceTree = "<group>"; };
 		1554B1091AC06C8500B41289 /* EDCategoriesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDCategoriesVC.h; sourceTree = "<group>"; };
 		1554B10A1AC06C8500B41289 /* EDCategoriesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDCategoriesVC.m; sourceTree = "<group>"; };
 		1554B10B1AC06C8500B41289 /* EDCategoriesVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EDCategoriesVC.xib; sourceTree = "<group>"; };
@@ -172,14 +230,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1554B0E41AC047A600B41289 /* Forum */ = {
+		15510BC41ACF126D008CAA88 /* Community */ = {
 			isa = PBXGroup;
 			children = (
-				1554B0E81AC047BB00B41289 /* EDForumVC.h */,
-				1554B0E91AC047BB00B41289 /* EDForumVC.m */,
-				1554B0EA1AC047BB00B41289 /* EDForumVC.xib */,
+				15510BC51ACF126D008CAA88 /* EDCommunityVC.h */,
+				15510BC61ACF126D008CAA88 /* EDCommunityVC.m */,
+				15510BC71ACF126D008CAA88 /* EDCommunityVC.xib */,
 			);
-			path = Forum;
+			path = Community;
+			sourceTree = "<group>";
+		};
+		15510BCA1ACF1274008CAA88 /* Community */ = {
+			isa = PBXGroup;
+			children = (
+				15510BCB1ACF1274008CAA88 /* TicketCell.h */,
+				15510BCC1ACF1274008CAA88 /* TicketCell.m */,
+				15510BCD1ACF1274008CAA88 /* TicketCell.xib */,
+			);
+			path = Community;
+			sourceTree = "<group>";
+		};
+		15510BDA1ACF1EE7008CAA88 /* MyCourses */ = {
+			isa = PBXGroup;
+			children = (
+				15510BE01ACF1F95008CAA88 /* EDMyCourseCell.h */,
+				15510BE11ACF1F95008CAA88 /* EDMyCourseCell.m */,
+				15510BE21ACF1F95008CAA88 /* EDMyCourseCell.xib */,
+			);
+			path = MyCourses;
+			sourceTree = "<group>";
+		};
+		15510BF91ACF2CE6008CAA88 /* Redeem */ = {
+			isa = PBXGroup;
+			children = (
+				15510BFA1ACF2CE6008CAA88 /* EDRedeemVC.h */,
+				15510BFB1ACF2CE6008CAA88 /* EDRedeemVC.m */,
+				15510BFC1ACF2CE6008CAA88 /* EDRedeemVC.xib */,
+			);
+			path = Redeem;
+			sourceTree = "<group>";
+		};
+		15510C0A1ACFDB03008CAA88 /* OperationHandler */ = {
+			isa = PBXGroup;
+			children = (
+				15510C0B1ACFDB1D008CAA88 /* EDOperationHandler.h */,
+				15510C0C1ACFDB1D008CAA88 /* EDOperationHandler.m */,
+			);
+			path = OperationHandler;
 			sourceTree = "<group>";
 		};
 		1554B0E51AC047A600B41289 /* Home */ = {
@@ -191,6 +288,12 @@
 				1554B1091AC06C8500B41289 /* EDCategoriesVC.h */,
 				1554B10A1AC06C8500B41289 /* EDCategoriesVC.m */,
 				1554B10B1AC06C8500B41289 /* EDCategoriesVC.xib */,
+				15510BD51ACF1832008CAA88 /* EDCourseListVC.h */,
+				15510BD61ACF1832008CAA88 /* EDCourseListVC.m */,
+				15510BD71ACF1832008CAA88 /* EDCourseListVC.xib */,
+				15510BFF1ACF3375008CAA88 /* EDCourseDetailVC.h */,
+				15510C001ACF3375008CAA88 /* EDCourseDetailVC.m */,
+				15510C011ACF3375008CAA88 /* EDCourseDetailVC.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -201,6 +304,9 @@
 				1554B0F21AC047ED00B41289 /* EDMyCourseVC.h */,
 				1554B0F31AC047ED00B41289 /* EDMyCourseVC.m */,
 				1554B0F41AC047ED00B41289 /* EDMyCourseVC.xib */,
+				15510C041ACF338E008CAA88 /* EDMyCourseDetailVC.h */,
+				15510C051ACF338E008CAA88 /* EDMyCourseDetailVC.m */,
+				15510C061ACF338E008CAA88 /* EDMyCourseDetailVC.xib */,
 			);
 			path = MyCourses;
 			sourceTree = "<group>";
@@ -218,9 +324,21 @@
 		1554B0FD1AC0507600B41289 /* More */ = {
 			isa = PBXGroup;
 			children = (
-				1554B0FE1AC050A200B41289 /* EDMoreVC.h */,
-				1554B0FF1AC050A200B41289 /* EDMoreVC.m */,
-				1554B1001AC050A200B41289 /* EDMoreVC.xib */,
+				1554B0FE1AC050A200B41289 /* EDSettingsVC.h */,
+				1554B0FF1AC050A200B41289 /* EDSettingsVC.m */,
+				1554B1001AC050A200B41289 /* EDSettingsVC.xib */,
+				15510BE51ACF281E008CAA88 /* EDProfileVC.h */,
+				15510BE61ACF281E008CAA88 /* EDProfileVC.m */,
+				15510BE71ACF281E008CAA88 /* EDProfileVC.xib */,
+				15510BEA1ACF2967008CAA88 /* EDContentDownloadVC.h */,
+				15510BEB1ACF2967008CAA88 /* EDContentDownloadVC.m */,
+				15510BEC1ACF2967008CAA88 /* EDContentDownloadVC.xib */,
+				15510BEF1ACF29F7008CAA88 /* EDAboutVC.h */,
+				15510BF01ACF29F7008CAA88 /* EDAboutVC.m */,
+				15510BF11ACF29F7008CAA88 /* EDAboutVC.xib */,
+				15510BF41ACF2AF3008CAA88 /* EDCommonWebViewVC.h */,
+				15510BF51ACF2AF3008CAA88 /* EDCommonWebViewVC.m */,
+				15510BF61ACF2AF3008CAA88 /* EDCommonWebViewVC.xib */,
 			);
 			path = More;
 			sourceTree = "<group>";
@@ -255,6 +373,7 @@
 		1583AF351AB80B1D0000631C /* Edureka */ = {
 			isa = PBXGroup;
 			children = (
+				15510C0A1ACFDB03008CAA88 /* OperationHandler */,
 				15FA91131AC3381300152E90 /* BusinessLayer */,
 				15E626291ABDE89F00F886E8 /* Model */,
 				15573B9E1AB9731B00C46120 /* Database */,
@@ -335,13 +454,13 @@
 		1583AF661AB80BDB0000631C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				15510BF91ACF2CE6008CAA88 /* Redeem */,
+				15510BC41ACF126D008CAA88 /* Community */,
 				1554B0FD1AC0507600B41289 /* More */,
-				1554B0E41AC047A600B41289 /* Forum */,
 				1554B0E51AC047A600B41289 /* Home */,
 				1554B0E61AC047A600B41289 /* MyCourses */,
 				1554B0E71AC047A600B41289 /* Tickets */,
 				15EC83931ABAD14600DE941E /* Login */,
-				15EC83941ABAD14600DE941E /* MyCourses */,
 				15EC83951ABAD14600DE941E /* Search */,
 			);
 			path = ViewControllers;
@@ -428,13 +547,6 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
-		15EC83941ABAD14600DE941E /* MyCourses */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = MyCourses;
-			sourceTree = "<group>";
-		};
 		15EC83951ABAD14600DE941E /* Search */ = {
 			isa = PBXGroup;
 			children = (
@@ -474,6 +586,8 @@
 		15FA912A1AC3525E00152E90 /* CustomCells */ = {
 			isa = PBXGroup;
 			children = (
+				15510BDA1ACF1EE7008CAA88 /* MyCourses */,
+				15510BCA1ACF1274008CAA88 /* Community */,
 				15FA913B1AC3F3E700152E90 /* Home */,
 				15FA91351AC3F3E100152E90 /* Category */,
 			);
@@ -515,6 +629,9 @@
 				15FA913C1AC3F40F00152E90 /* EDHomeCarouselCell.h */,
 				15FA913D1AC3F40F00152E90 /* EDHomeCarouselCell.m */,
 				15FA913E1AC3F40F00152E90 /* EDHomeCarouselCell.xib */,
+				15510BD01ACF1599008CAA88 /* EDCourseCell.h */,
+				15510BD11ACF1599008CAA88 /* EDCourseCell.m */,
+				15510BD21ACF1599008CAA88 /* EDCourseCell.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -637,15 +754,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				15E6262C1ABDE9D900F886E8 /* trending.json in Resources */,
+				15510BFE1ACF2CE6008CAA88 /* EDRedeemVC.xib in Resources */,
+				15510BE91ACF281E008CAA88 /* EDProfileVC.xib in Resources */,
 				15FA91491AC3FCCD00152E90 /* EDCourseView.xib in Resources */,
 				15FA91521AC4043300152E90 /* Recommended.plist in Resources */,
+				15510BE41ACF1F95008CAA88 /* EDMyCourseCell.xib in Resources */,
+				15510BF31ACF29F7008CAA88 /* EDAboutVC.xib in Resources */,
+				15510BCF1ACF1274008CAA88 /* TicketCell.xib in Resources */,
 				15FA91541AC4048900152E90 /* Wishlist.plist in Resources */,
 				15FA91501AC4042200152E90 /* Trending.plist in Resources */,
 				15FA913A1AC3F3E100152E90 /* CategoryCell.xib in Resources */,
 				1554B0FB1AC0480800B41289 /* EDHomeVC.xib in Resources */,
-				1554B1021AC050A200B41289 /* EDMoreVC.xib in Resources */,
-				1554B0EC1AC047BB00B41289 /* EDForumVC.xib in Resources */,
+				1554B1021AC050A200B41289 /* EDSettingsVC.xib in Resources */,
+				15510BEE1ACF2967008CAA88 /* EDContentDownloadVC.xib in Resources */,
+				15510BD41ACF1599008CAA88 /* EDCourseCell.xib in Resources */,
+				15510C081ACF338E008CAA88 /* EDMyCourseDetailVC.xib in Resources */,
+				15510BD91ACF1832008CAA88 /* EDCourseListVC.xib in Resources */,
+				15510BC91ACF126D008CAA88 /* EDCommunityVC.xib in Resources */,
 				1554B0DE1AC0471000B41289 /* EDLoginVC.xib in Resources */,
+				15510BF81ACF2AF3008CAA88 /* EDCommonWebViewVC.xib in Resources */,
 				1554B0F11AC047DA00B41289 /* EDTicketVC.xib in Resources */,
 				15E626251ABDE33700F886E8 /* Default-6Plus.png in Resources */,
 				15E626231ABDE33700F886E8 /* Default-568h.png in Resources */,
@@ -660,6 +787,7 @@
 				1583AF441AB80B1D0000631C /* Images.xcassets in Resources */,
 				15FA91401AC3F40F00152E90 /* EDHomeCarouselCell.xib in Resources */,
 				1554B10D1AC06C8500B41289 /* EDCategoriesVC.xib in Resources */,
+				15510C031ACF3375008CAA88 /* EDCourseDetailVC.xib in Resources */,
 				1554B0D41AC046E600B41289 /* EDWelcomeVC.xib in Resources */,
 				1554B0F61AC047ED00B41289 /* EDMyCourseVC.xib in Resources */,
 				15E6262D1ABDE9D900F886E8 /* TemplateIcon2x.png in Resources */,
@@ -713,28 +841,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15510BC81ACF126D008CAA88 /* EDCommunityVC.m in Sources */,
 				15FA91391AC3F3E100152E90 /* CategoryCell.m in Sources */,
 				15FA91171AC3383300152E90 /* CommonBL.m in Sources */,
 				1554B0FA1AC0480800B41289 /* EDHomeVC.m in Sources */,
+				15510BD81ACF1832008CAA88 /* EDCourseListVC.m in Sources */,
 				1554B10C1AC06C8500B41289 /* EDCategoriesVC.m in Sources */,
-				1554B0EB1AC047BB00B41289 /* EDForumVC.m in Sources */,
 				15FA91341AC352A500152E90 /* UIThumbView.m in Sources */,
 				1554B0DD1AC0471000B41289 /* EDLoginVC.m in Sources */,
 				15FA914C1AC4021400152E90 /* Course.m in Sources */,
 				1554B0D81AC046F700B41289 /* EDRegisterVC.m in Sources */,
+				15510BE31ACF1F95008CAA88 /* EDMyCourseCell.m in Sources */,
 				15FA91441AC3F6F000152E90 /* UserBL.m in Sources */,
 				15FA91581AC404E900152E90 /* CourseBL.m in Sources */,
+				15510BED1ACF2967008CAA88 /* EDContentDownloadVC.m in Sources */,
 				1554B0F51AC047ED00B41289 /* EDMyCourseVC.m in Sources */,
+				15510C0D1ACFDB1D008CAA88 /* EDOperationHandler.m in Sources */,
 				15FA91471AC3FCB800152E90 /* EDCourseView.m in Sources */,
+				15510BF21ACF29F7008CAA88 /* EDAboutVC.m in Sources */,
 				1554B0E21AC0473E00B41289 /* EDForgotPasswordVC.m in Sources */,
 				1554B0F01AC047DA00B41289 /* EDTicketVC.m in Sources */,
+				15510C021ACF3375008CAA88 /* EDCourseDetailVC.m in Sources */,
 				1583AF691AB80BDB0000631C /* AppDelegate.m in Sources */,
+				15510BFD1ACF2CE6008CAA88 /* EDRedeemVC.m in Sources */,
 				15FA911B1AC34BD100152E90 /* CategoriesBL.m in Sources */,
 				15FA913F1AC3F40F00152E90 /* EDHomeCarouselCell.m in Sources */,
+				15510BF71ACF2AF3008CAA88 /* EDCommonWebViewVC.m in Sources */,
+				15510C071ACF338E008CAA88 /* EDMyCourseDetailVC.m in Sources */,
+				15510BCE1ACF1274008CAA88 /* TicketCell.m in Sources */,
+				15510BD31ACF1599008CAA88 /* EDCourseCell.m in Sources */,
 				1554B0D31AC046E600B41289 /* EDWelcomeVC.m in Sources */,
-				1554B1011AC050A200B41289 /* EDMoreVC.m in Sources */,
+				1554B1011AC050A200B41289 /* EDSettingsVC.m in Sources */,
 				15FA91291AC3506B00152E90 /* Categories.m in Sources */,
 				1583AF391AB80B1D0000631C /* main.m in Sources */,
+				15510BE81ACF281E008CAA88 /* EDProfileVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

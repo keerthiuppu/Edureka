@@ -21,5 +21,19 @@ static CommonBL* sharedObj = nil;
     return sharedObj;
 }
 
+-(void) parseAppAuthData:(NSMutableDictionary*) dictionary
+{
+    if([dictionary objectForKey:@"token"])
+        [[NSUserDefaults standardUserDefaults] setObject:[dictionary objectForKey:@"token"] forKey:KEY_TOKEN_ID];
+    
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+-(void) showErrorAlertWithMessage:(NSString*) messageStr
+{
+    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:APP_NAME message:messageStr delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+    [alert show];
+}
+
 
 @end

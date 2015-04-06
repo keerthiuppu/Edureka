@@ -10,6 +10,7 @@
 #import "CategoriesBL.h"
 #import "Categories.h"
 #import "CategoryCell.h"
+#import "EDCourseListVC.h"
 
 @interface EDCategoriesVC ()
 {
@@ -99,6 +100,12 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     return 64.0f;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    EDCourseListVC* edCourseListVC = [[EDCourseListVC alloc] initWithNibName:@"EDCourseListVC" bundle:nil];
+    [self.navigationController pushViewController:edCourseListVC animated:YES];
 }
 
 @end
