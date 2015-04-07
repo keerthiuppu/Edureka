@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-Edureka-AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Edureka-Bolts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Edureka-Facebook-iOS-SDK.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Edureka-IOSLinkedInAPI.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Edureka-SDWebImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Edureka-iCarousel.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Edureka.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+<<<<<<< HEAD:Edureka/Pods/Pods.xcodeproj/xcuserdata/neeraj.sharma.xcuserdatad/xcschemes/xcschememanagement.plist
+		<key>04DE121DAFC20D4FD0A7BF60</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>54CC4EDF65DE5D0D795F61AA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>594D5C150115061925E9CBA0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>93DA4DFE122AE4A89DC1640C</key>
+=======
+		<key>223F83674D06F482E62C9511</key>
+>>>>>>> origin/Sprint_1:Edureka/Pods/Pods.xcodeproj/xcuserdata/keerthi.uppu.xcuserdatad/xcschemes/xcschememanagement.plist
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+<<<<<<< HEAD:Edureka/Pods/Pods.xcodeproj/xcuserdata/neeraj.sharma.xcuserdatad/xcschemes/xcschememanagement.plist
+		<key>A69CB4B285D97F1BDCF7AA7E</key>
+=======
+		<key>2E24B2317610E9B7972E7DDB</key>
+>>>>>>> origin/Sprint_1:Edureka/Pods/Pods.xcodeproj/xcuserdata/keerthi.uppu.xcuserdatad/xcschemes/xcschememanagement.plist
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+<<<<<<< HEAD:Edureka/Pods/Pods.xcodeproj/xcuserdata/neeraj.sharma.xcuserdatad/xcschemes/xcschememanagement.plist
+		<key>B9A485000666480A1F2577BA</key>
+=======
+		<key>6EDB71F4579BBEC7421E6469</key>
+>>>>>>> origin/Sprint_1:Edureka/Pods/Pods.xcodeproj/xcuserdata/keerthi.uppu.xcuserdatad/xcschemes/xcschememanagement.plist
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+<<<<<<< HEAD:Edureka/Pods/Pods.xcodeproj/xcuserdata/neeraj.sharma.xcuserdatad/xcschemes/xcschememanagement.plist
+		<key>DC38E06A5EDB0EB3F6F6A629</key>
+=======
+		<key>7450849328A9733CD832D48B</key>
+>>>>>>> origin/Sprint_1:Edureka/Pods/Pods.xcodeproj/xcuserdata/keerthi.uppu.xcuserdatad/xcschemes/xcschememanagement.plist
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

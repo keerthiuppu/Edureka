@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+
 		152215431AD3B11400E50102 /* KelltonSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 152215411AD3B11400E50102 /* KelltonSettings.m */; };
 		152215441AD3B11400E50102 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 152215421AD3B11400E50102 /* Settings.bundle */; };
 		152215481AD3C21800E50102 /* FBHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 152215471AD3C21800E50102 /* FBHandler.m */; };
 		1522154C1AD3D33600E50102 /* LinkedInHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1522154B1AD3D33600E50102 /* LinkedInHandler.m */; };
+		147022031AD3BCB600448679 /* EDSearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 147022011AD3BCB600448679 /* EDSearchVC.m */; };
+		147022041AD3BCB600448679 /* EDSearchVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 147022021AD3BCB600448679 /* EDSearchVC.xib */; };
 		15510BC81ACF126D008CAA88 /* EDCommunityVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 15510BC61ACF126D008CAA88 /* EDCommunityVC.m */; };
 		15510BC91ACF126D008CAA88 /* EDCommunityVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15510BC71ACF126D008CAA88 /* EDCommunityVC.xib */; };
 		15510BCE1ACF1274008CAA88 /* TicketCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 15510BCC1ACF1274008CAA88 /* TicketCell.m */; };
@@ -105,6 +108,9 @@
 		152215471AD3C21800E50102 /* FBHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBHandler.m; sourceTree = "<group>"; };
 		1522154A1AD3D33600E50102 /* LinkedInHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedInHandler.h; sourceTree = "<group>"; };
 		1522154B1AD3D33600E50102 /* LinkedInHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedInHandler.m; sourceTree = "<group>"; };
+		147022001AD3BCB600448679 /* EDSearchVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDSearchVC.h; sourceTree = "<group>"; };
+		147022011AD3BCB600448679 /* EDSearchVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDSearchVC.m; sourceTree = "<group>"; };
+		147022021AD3BCB600448679 /* EDSearchVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EDSearchVC.xib; sourceTree = "<group>"; };
 		15510BC51ACF126D008CAA88 /* EDCommunityVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDCommunityVC.h; sourceTree = "<group>"; };
 		15510BC61ACF126D008CAA88 /* EDCommunityVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDCommunityVC.m; sourceTree = "<group>"; };
 		15510BC71ACF126D008CAA88 /* EDCommunityVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EDCommunityVC.xib; sourceTree = "<group>"; };
@@ -333,6 +339,9 @@
 				15510BFF1ACF3375008CAA88 /* EDCourseDetailVC.h */,
 				15510C001ACF3375008CAA88 /* EDCourseDetailVC.m */,
 				15510C011ACF3375008CAA88 /* EDCourseDetailVC.xib */,
+				147022001AD3BCB600448679 /* EDSearchVC.h */,
+				147022011AD3BCB600448679 /* EDSearchVC.m */,
+				147022021AD3BCB600448679 /* EDSearchVC.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -830,6 +839,7 @@
 				1554B1111AC06D5800B41289 /* backBtn@3x.png in Resources */,
 				1583AF441AB80B1D0000631C /* Images.xcassets in Resources */,
 				15FA91401AC3F40F00152E90 /* EDHomeCarouselCell.xib in Resources */,
+				147022041AD3BCB600448679 /* EDSearchVC.xib in Resources */,
 				1554B10D1AC06C8500B41289 /* EDCategoriesVC.xib in Resources */,
 				15510C031ACF3375008CAA88 /* EDCourseDetailVC.xib in Resources */,
 				1554B0D41AC046E600B41289 /* EDWelcomeVC.xib in Resources */,
@@ -908,6 +918,7 @@
 				1554B0DD1AC0471000B41289 /* EDLoginVC.m in Sources */,
 				15FA914C1AC4021400152E90 /* Course.m in Sources */,
 				1554B0D81AC046F700B41289 /* EDRegisterVC.m in Sources */,
+				147022031AD3BCB600448679 /* EDSearchVC.m in Sources */,
 				15510BE31ACF1F95008CAA88 /* EDMyCourseCell.m in Sources */,
 				15FA91441AC3F6F000152E90 /* UserBL.m in Sources */,
 				152215481AD3C21800E50102 /* FBHandler.m in Sources */,

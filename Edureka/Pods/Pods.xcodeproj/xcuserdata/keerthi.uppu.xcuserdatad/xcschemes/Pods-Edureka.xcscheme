@@ -14,9 +14,13 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B9A485000666480A1F2577BA"
-               BuildableName = "libPods-Edureka-AFNetworking.a"
-               BlueprintName = "Pods-Edureka-AFNetworking"
+<<<<<<< HEAD:Edureka/Pods/Pods.xcodeproj/xcuserdata/neeraj.sharma.xcuserdatad/xcschemes/Pods-Edureka.xcscheme
+               BlueprintIdentifier = "04DE121DAFC20D4FD0A7BF60"
+=======
+               BlueprintIdentifier = "2E24B2317610E9B7972E7DDB"
+>>>>>>> origin/Sprint_1:Edureka/Pods/Pods.xcodeproj/xcuserdata/keerthi.uppu.xcuserdatad/xcschemes/Pods-Edureka.xcscheme
+               BuildableName = "libPods-Edureka.a"
+               BlueprintName = "Pods-Edureka"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

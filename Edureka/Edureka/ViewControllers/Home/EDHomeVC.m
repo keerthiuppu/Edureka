@@ -13,6 +13,7 @@
 #import "EDCourseView.h"
 #import "CourseBL.h"
 #import "Course.h"
+#import "EDSearchVC.h"
 
 @interface EDHomeVC ()
 {
@@ -93,6 +94,10 @@
 }
 
 -(void) searchButtontapped{
+    
+    EDSearchVC* edSearchVC = [[EDSearchVC alloc] initWithNibName:@"EDSearchVC" bundle:nil];
+    
+    [self presentViewController:edSearchVC animated:YES completion:nil];
 }
 
 #pragma mark - UITableViewDelegate & Datasource methods
