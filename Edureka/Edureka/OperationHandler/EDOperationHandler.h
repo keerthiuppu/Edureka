@@ -13,4 +13,12 @@
 
 - (void)getAuthTokenForApp:(NSMutableDictionary *)params WithCompletionBlock:(void (^)(NSMutableDictionary *dict, NSError *error))completionBlock;
 
+- (void)loginUserWithParams:(NSMutableDictionary*)params WithCompletionBlock:(void (^)(NSMutableDictionary *dict, NSError *error))completionBlock;
+
+- (void)registerUserWithParams:(NSMutableDictionary*)params WithCompletionBlock:(void (^)(NSMutableDictionary *dict, NSError *error))completionBlock;
+
+- (void)logoutUserWithParams:(NSMutableDictionary*)params WithCompletionBlock:(void (^)(NSMutableDictionary *dict, NSError *error))completionBlock;
+
+
+
 @end

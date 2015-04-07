@@ -23,10 +23,24 @@ static CommonBL* sharedObj = nil;
 
 -(void) parseAppAuthData:(NSMutableDictionary*) dictionary
 {
-    if([dictionary objectForKey:@"token"])
+    if([[dictionary objectForKey:@"token"] isKindOfClass:[NSString class]])
         [[NSUserDefaults standardUserDefaults] setObject:[dictionary objectForKey:@"token"] forKey:KEY_TOKEN_ID];
+    else if([[dictionary objectForKey:@"token"] isKindOfClass:[NSNumber class]])
+        [[NSUserDefaults standardUserDefaults] setObject:[NSString stringWithFormat:@"%d", [[dictionary objectForKey:@"token"] intValue]] forKey:KEY_TOKEN_ID];
+    else
+        [[NSUserDefaults standardUserDefaults] setObject:[dictionary objectForKey:@"token"] forKey:KEY_TOKEN_ID];
+
     
     [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+-(BOOL) isAuthTokenAvailable
+{
+    
+    if([[NSUserDefaults standardUserDefaults] objectForKey:KEY_TOKEN_ID]!=nil || [[[NSUserDefaults standardUserDefaults] objectForKey:KEY_TOKEN_ID] length]>0)
+        return YES;
+    else
+        return NO;
 }
 
 -(void) showErrorAlertWithMessage:(NSString*) messageStr

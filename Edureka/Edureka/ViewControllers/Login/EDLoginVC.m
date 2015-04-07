@@ -9,7 +9,10 @@
 #import "EDLoginVC.h"
 
 @interface EDLoginVC ()
-
+{
+    IBOutlet UITextField* emailTextField;
+    IBOutlet UITextField* passwordTextField;
+}
 @end
 
 @implementation EDLoginVC
@@ -49,11 +52,33 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
--(void) loginButtonTapped{
-    [[NSUserDefaults standardUserDefaults] setObject:@"neeraj.sharma@kelltontech.com" forKey:KEY_USER_EMAIL];
-    [[NSUserDefaults standardUserDefaults] synchronize];
+-(void) loginButtonTapped
+{
+   if([self validate])
+   {
+       [APP_DELEGATE showLoadingBar];
+       
+       NSMutableDictionary* paramsDict = [[NSMutableDictionary alloc] initWithCapacity:0];
+       [paramsDict setObject:emailTextField.text forKey:@"email_address"];
+       [paramsDict setObject:passwordTextField.text forKey:@"password"];
+       
+
+       [[EDOperationHandler sharedInstance] loginUserWithParams:paramsDict WithCompletionBlock:^(NSMutableDictionary *dict, NSError *error) {
+ 
+           [APP_DELEGATE hideLoadingBar];
+           [APP_DELEGATE configureTabBar];
+       }];
+   }
     
-    [APP_DELEGATE configureTabBar];
+   
 }
+
+-(BOOL) validate
+{
+
+    return YES;
+}
+
+
 
 @end

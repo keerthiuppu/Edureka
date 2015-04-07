@@ -9,7 +9,15 @@
 #import "EDRegisterVC.h"
 
 @interface EDRegisterVC ()
-
+{
+    IBOutlet UITextField* firstNameTextField;
+    IBOutlet UITextField* lastNameTextField;
+    IBOutlet UITextField* emailTextField;
+    IBOutlet UITextField* mobileTextField;
+    IBOutlet UITextField* passwordTextField;
+    
+    
+}
 @end
 
 @implementation EDRegisterVC
@@ -52,7 +60,24 @@
 
 -(void) signUpButtonTapped
 {
-    [APP_DELEGATE configureTabBar];
+    [APP_DELEGATE showLoadingBar];
+    
+    NSMutableDictionary* paramsDict = [[NSMutableDictionary alloc] initWithCapacity:0];
+    [paramsDict setObject:firstNameTextField.text forKey:@"first_name"];
+    [paramsDict setObject:lastNameTextField.text forKey:@"last_name"];
+    [paramsDict setObject:emailTextField.text forKey:@"email_address"];
+    [paramsDict setObject:passwordTextField.text forKey:@"password"];
+    [paramsDict setObject:mobileTextField.text forKey:@"mobile_no"];
+    [paramsDict setObject:@"IN" forKey:@"country_code"];
+    
+    [[EDOperationHandler sharedInstance] registerUserWithParams:paramsDict WithCompletionBlock:^(NSMutableDictionary *dict, NSError *error) {
+        //
+        [APP_DELEGATE hideLoadingBar];
+        [APP_DELEGATE configureTabBar];
+    }];
+    
+    
+    //[APP_DELEGATE configureTabBar];
 }
 
 

@@ -12,6 +12,14 @@
 @property(nonatomic, strong) NSString* courseId;
 @property(nonatomic, strong) NSString* courseName;
 @property(nonatomic, strong) NSString* courseImageUrl;
+@property(nonatomic, strong) NSString* rating;
+@property(nonatomic, strong) NSString* numberOfLearners;
+@property(nonatomic, strong) NSString* priceUSD;
+@property(nonatomic, strong) NSString* priceINR;
+@property(nonatomic, strong) NSString* discountedPrice;
+
+
+
 
 -(id) initWithDictionary:(NSMutableDictionary*) dictionary;
 

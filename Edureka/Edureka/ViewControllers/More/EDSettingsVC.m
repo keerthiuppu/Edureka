@@ -178,7 +178,15 @@
 
 -(void) callLogout
 {
-
+    
+    [APP_DELEGATE showLoadingBar];
+    NSMutableDictionary* dictionary = [[NSMutableDictionary alloc] initWithCapacity:0];
+    [dictionary setObject:[[NSUserDefaults standardUserDefaults] objectForKey:KEY_SESSION_ID] forKey:@"sessionId"];
+    
+    [[EDOperationHandler sharedInstance] logoutUserWithParams:dictionary WithCompletionBlock:^(NSMutableDictionary *dict, NSError *error) {
+        //
+        
+    }];
 }
 
 

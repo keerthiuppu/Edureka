@@ -7,6 +7,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EDLoginVC">
             <connections>
+                <outlet property="emailTextField" destination="BJa-c2-w0T" id="Kcj-A1-YlE"/>
+                <outlet property="passwordTextField" destination="maW-N7-tFO" id="O92-di-AXh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

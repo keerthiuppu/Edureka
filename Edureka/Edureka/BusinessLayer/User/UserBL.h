@@ -12,5 +12,6 @@
 +(UserBL*)sharedInstance;
 
 -(BOOL) isUserLoggedIn;
+-(void) parseUserData:(NSMutableDictionary*) dictionary;
 
 @end

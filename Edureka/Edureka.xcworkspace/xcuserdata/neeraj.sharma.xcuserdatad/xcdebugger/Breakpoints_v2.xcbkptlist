@@ -25,84 +25,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Pods/SDWebImage/SDWebImage/UIImageView+WebCache.m"
-            timestampString = "449058088.020277"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "-sd_setImageWithURL:placeholderImage:options:progress:completed:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Edureka/AppDelegate/AppDelegate.m"
-            timestampString = "450087169.765765"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
-            landmarkName = "-application:didFinishLaunchingWithOptions:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Edureka/OperationHandler/EDOperationHandler.m"
-            timestampString = "450081232.411322"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "-getAuthTokenForApp:WithCompletionBlock:"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[EDOperationHandler getAuthTokenForApp:WithCompletionBlock:]"
-                  moduleName = "Edureka"
-                  urlString = "file:///Users/neeraj.sharma/Desktop/Edureka/Edureka_GitLab/Edureka/Edureka/OperationHandler/EDOperationHandler.m"
-                  timestampString = "450093401.479226"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
-                  offsetFromSymbolStart = "214">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__61-[EDOperationHandler getAuthTokenForApp:WithCompletionBlock:]_block_invoke"
-                  moduleName = "Edureka"
-                  urlString = "file:///Users/neeraj.sharma/Desktop/Edureka/Edureka_GitLab/Edureka/Edureka/OperationHandler/EDOperationHandler.m"
-                  timestampString = "450093401.479387"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
-                  offsetFromSymbolStart = "64">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Edureka/ViewControllers/Login/EDWelcomeVC.m"
             timestampString = "450088090.587227"
             startingColumnNumber = "9223372036854775807"
@@ -119,7 +41,7 @@
                   symbolName = "__41-[EDWelcomeVC facebookLoginButtonTapped:]_block_invoke_2"
                   moduleName = "Edureka"
                   urlString = "file:///Users/neeraj.sharma/Desktop/Edureka/Edureka_GitLab/Edureka/Edureka/ViewControllers/Login/EDWelcomeVC.m"
-                  timestampString = "450093401.480208"
+                  timestampString = "450138013.35667"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "81"
@@ -130,24 +52,10 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "__41-[EDWelcomeVC facebookLoginButtonTapped:]_block_invoke_2"
-                  moduleName = "Edureka"
-                  urlString = "file:///Users/neeraj.sharma/Desktop/Edureka/Edureka_GitLab/Edureka/Edureka/ViewControllers/Login/EDWelcomeVC.m"
-                  timestampString = "450093401.480363"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "81"
-                  endingLineNumber = "81"
-                  offsetFromSymbolStart = "464">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
                   symbolName = "__41-[EDWelcomeVC facebookLoginButtonTapped:]_block_invoke_3"
                   moduleName = "Edureka"
                   urlString = "file:///Users/neeraj.sharma/Desktop/Edureka/Edureka_GitLab/Edureka/Edureka/ViewControllers/Login/EDWelcomeVC.m"
-                  timestampString = "450093401.480507"
+                  timestampString = "450138013.357185"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "81"
@@ -179,7 +87,7 @@
                   symbolName = "__41-[EDWelcomeVC facebookLoginButtonTapped:]_block_invoke"
                   moduleName = "Edureka"
                   urlString = "file:///Users/neeraj.sharma/Desktop/Edureka/Edureka_GitLab/Edureka/Edureka/ViewControllers/Login/EDWelcomeVC.m"
-                  timestampString = "450093401.48165"
+                  timestampString = "450138013.358376"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "74"
@@ -193,7 +101,7 @@
                   symbolName = "__41-[EDWelcomeVC facebookLoginButtonTapped:]_block_invoke_2"
                   moduleName = "Edureka"
                   urlString = "file:///Users/neeraj.sharma/Desktop/Edureka/Edureka_GitLab/Edureka/Edureka/ViewControllers/Login/EDWelcomeVC.m"
-                  timestampString = "450093401.481799"
+                  timestampString = "450138013.358545"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "74"
@@ -249,36 +157,6 @@
             endingLineNumber = "96"
             landmarkName = "-linkedInLoginButtonTapped:"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[EDWelcomeVC linkedInLoginButtonTapped:]"
-                  moduleName = "Edureka"
-                  urlString = "file:///Users/neeraj.sharma/Desktop/Edureka/Edureka_GitLab/Edureka/Edureka/ViewControllers/Login/EDWelcomeVC.m"
-                  timestampString = "450093401.483594"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "96"
-                  endingLineNumber = "96"
-                  offsetFromSymbolStart = "39">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__41-[EDWelcomeVC linkedInLoginButtonTapped:]_block_invoke"
-                  moduleName = "Edureka"
-                  urlString = "file:///Users/neeraj.sharma/Desktop/Edureka/Edureka_GitLab/Edureka/Edureka/ViewControllers/Login/EDWelcomeVC.m"
-                  timestampString = "450093401.483756"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "96"
-                  endingLineNumber = "96"
-                  offsetFromSymbolStart = "67">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -303,7 +181,7 @@
                   symbolName = "-[LinkedInHandler loginLinkedInForAppWithParams:WithCompletionBlock:]"
                   moduleName = "Edureka"
                   urlString = "file:///Users/neeraj.sharma/Desktop/Edureka/Edureka_GitLab/Edureka/Edureka/Utilities/LinkedInHandler/LinkedInHandler.m"
-                  timestampString = "450093401.484548"
+                  timestampString = "450138013.360408"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "43"
@@ -317,7 +195,7 @@
                   symbolName = "__69-[LinkedInHandler loginLinkedInForAppWithParams:WithCompletionBlock:]_block_invoke"
                   moduleName = "Edureka"
                   urlString = "file:///Users/neeraj.sharma/Desktop/Edureka/Edureka_GitLab/Edureka/Edureka/Utilities/LinkedInHandler/LinkedInHandler.m"
-                  timestampString = "450093401.484697"
+                  timestampString = "450138013.360558"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "43"
@@ -500,6 +378,400 @@
             startingLineNumber = "44"
             endingLineNumber = "44"
             landmarkName = "+clientForApplication:presentingViewController:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Edureka/AppDelegate/AppDelegate.m"
+            timestampString = "450132160.286035"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "-getAppAthToken"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Edureka/OperationHandler/EDOperationHandler.m"
+            timestampString = "450133996.212556"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "-getAuthTokenForApp:WithCompletionBlock:"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[EDOperationHandler getAuthTokenForApp:WithCompletionBlock:]"
+                  moduleName = "Edureka"
+                  urlString = "file:///Users/neeraj.sharma/Desktop/Edureka/Edureka_GitLab/Edureka/Edureka/OperationHandler/EDOperationHandler.m"
+                  timestampString = "450138013.365271"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "735">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__61-[EDOperationHandler getAuthTokenForApp:WithCompletionBlock:]_block_invoke"
+                  moduleName = "Edureka"
+                  urlString = "file:///Users/neeraj.sharma/Desktop/Edureka/Edureka_GitLab/Edureka/Edureka/OperationHandler/EDOperationHandler.m"
+                  timestampString = "450138013.365419"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "64">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.m"
+            timestampString = "450108257.817489"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1303"
+            endingLineNumber = "1303"
+            landmarkName = "-requestBySerializingRequest:withParameters:error:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/AFNetworking/AFNetworking/AFURLRequestSerialization.m"
+            timestampString = "450129433.253142"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1288"
+            endingLineNumber = "1288"
+            landmarkName = "-requestBySerializingRequest:withParameters:error:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Edureka/ViewControllers/Login/EDLoginVC.m"
+            timestampString = "450134265.374121"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "-loginButtonTapped"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Edureka/AppDelegate/AppDelegate.m"
+            timestampString = "450132244.990278"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "-application:didFinishLaunchingWithOptions:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Edureka/OperationHandler/EDOperationHandler.m"
+            timestampString = "450133996.212556"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "-loginUserWithParams:WithCompletionBlock:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Edureka/OperationHandler/EDOperationHandler.m"
+            timestampString = "450133996.212556"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "-loginUserWithParams:WithCompletionBlock:"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[EDOperationHandler loginUserWithParams:WithCompletionBlock:]"
+                  moduleName = "Edureka"
+                  urlString = "file:///Users/neeraj.sharma/Desktop/Edureka/Edureka_GitLab/Edureka/Edureka/OperationHandler/EDOperationHandler.m"
+                  timestampString = "450138013.368659"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "920">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__62-[EDOperationHandler loginUserWithParams:WithCompletionBlock:]_block_invoke"
+                  moduleName = "Edureka"
+                  urlString = "file:///Users/neeraj.sharma/Desktop/Edureka/Edureka_GitLab/Edureka/Edureka/OperationHandler/EDOperationHandler.m"
+                  timestampString = "450138013.368808"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "64">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Edureka/BusinessLayer/Common/CommonBL.m"
+            timestampString = "450132558.662422"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "-parseAppAuthData:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Edureka/OperationHandler/EDOperationHandler.m"
+            timestampString = "450135098.163546"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
+            landmarkName = "-logoutUserWithParams:WithCompletionBlock:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Edureka/OperationHandler/EDOperationHandler.m"
+            timestampString = "450135140.182523"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
+            landmarkName = "-logoutUserWithParams:WithCompletionBlock:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Edureka/OperationHandler/EDOperationHandler.m"
+            timestampString = "450135142.277602"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
+            landmarkName = "-registerUserWithParams:WithCompletionBlock:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Edureka/OperationHandler/EDOperationHandler.m"
+            timestampString = "450135156.464181"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "164"
+            endingLineNumber = "164"
+            landmarkName = "-logoutUserWithParams:WithCompletionBlock:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Edureka/OperationHandler/EDOperationHandler.m"
+            timestampString = "450135157.592574"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "160"
+            endingLineNumber = "160"
+            landmarkName = "-logoutUserWithParams:WithCompletionBlock:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Edureka/OperationHandler/EDOperationHandler.m"
+            timestampString = "450135196.175703"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
+            landmarkName = "-logoutUserWithParams:WithCompletionBlock:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Edureka/OperationHandler/EDOperationHandler.m"
+            timestampString = "450136242.077163"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
+            landmarkName = "-registerUserWithParams:WithCompletionBlock:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Edureka/OperationHandler/EDOperationHandler.m"
+            timestampString = "450136243.833076"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
+            landmarkName = "-registerUserWithParams:WithCompletionBlock:"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[EDOperationHandler registerUserWithParams:WithCompletionBlock:]"
+                  moduleName = "Edureka"
+                  urlString = "file:///Users/neeraj.sharma/Desktop/Edureka/Edureka_GitLab/Edureka/Edureka/OperationHandler/EDOperationHandler.m"
+                  timestampString = "450138013.372363"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "112"
+                  endingLineNumber = "112"
+                  offsetFromSymbolStart = "920">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__65-[EDOperationHandler registerUserWithParams:WithCompletionBlock:]_block_invoke"
+                  moduleName = "Edureka"
+                  urlString = "file:///Users/neeraj.sharma/Desktop/Edureka/Edureka_GitLab/Edureka/Edureka/OperationHandler/EDOperationHandler.m"
+                  timestampString = "450138013.372522"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "112"
+                  endingLineNumber = "112"
+                  offsetFromSymbolStart = "64">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Edureka/OperationHandler/EDOperationHandler.m"
+            timestampString = "450138154.248472"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
+            landmarkName = "-registerUserWithParams:WithCompletionBlock:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Edureka/OperationHandler/EDOperationHandler.m"
+            timestampString = "450138157.698335"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
+            landmarkName = "-registerUserWithParams:WithCompletionBlock:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

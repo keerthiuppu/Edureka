@@ -11,9 +11,9 @@
 #define LAST_CONF_KEY   @"lastClientServiceConfiguration"
 
 
-const NSString *ProductionServerKelltonServiceURL  =  @"https://dev.edurekaglobal.com/";//@"Your production server url";
-const NSString *QAServerKelltonServiceURL = @"https://dev.edurekaglobal.com/";//@"Your QA server url";
-const NSString *DevelopmentServerKelltonServiceURL = @"https://dev.edurekaglobal.com/";//@"Your development server"
+const NSString *ProductionServerKelltonServiceURL  =  @"https://dev.edurekaglobal.com/api/1.0/";//@"Your production server url";
+const NSString *QAServerKelltonServiceURL = @"https://dev.edurekaglobal.com/api/1.0/";//@"Your QA server url";
+const NSString *DevelopmentServerKelltonServiceURL = @"https://dev.edurekaglobal.com/api/1.0/";//@"Your development server"
 
 
 static KelltonSettings *_KelltonSettings = nil;

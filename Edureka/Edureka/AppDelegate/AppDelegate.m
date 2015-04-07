@@ -31,36 +31,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [self configureNavigationBar];
-    [self getAppAthToken];
     
-    //    NSLocale *locale = [NSLocale currentLocale];
-    //    NSArray *countryArray = [NSLocale ISOCountryCodes];
-    //
-    //    NSMutableArray *sortedCountryArray = [[NSMutableArray alloc] init];
-    //
-    //    for (NSString *countryCode in countryArray) {
-    //
-    //        NSString *displayNameString = [locale displayNameForKey:NSLocaleCountryCode value:countryCode];
-    //        [sortedCountryArray addObject:displayNameString];
-    //        NSString *countryCode = [locale objectForKey:NSLocaleCountryCode];
-    //        NSLog(@"CountryCode=%@ & countryName=%@", countryCode, displayNameString);
-    //    }
-    //
-    //
-    //     NSArray *localeArray  = [NSLocale ISOCountryCodes];
-    //    NSLocale *locale = [NSLocale currentLocale];
-    //    for (NSString *countryCode in localeArray) {
-    //     NSString *displayNameString = [locale displayNameForKey:NSLocaleCountryCode value:countryCode];
-    //        NSLog(@"Country Code=%@ --- Country Name=%@", countryCode, displayNameString);
-    
-    
-    //        NSString *countryCode = [locale objectForKey:NSLocaleCountryCode];
-    //        NSLog(@"CountryCode=%@ & countryName=%@", countryCode);
-    //    }
-    
-    
-    //  [sortedCountryArray sortUsingSelector:@selector(localizedCompare:)];
-    
+    if(![[CommonBL sharedInstance] isAuthTokenAvailable])
+        [self getAppAthToken];
+
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     EDWelcomeVC* edWelcomeVC = [[EDWelcomeVC alloc] initWithNibName:@"EDWelcomeVC" bundle:nil];
@@ -96,15 +70,18 @@
 -(void) getAppAthToken
 {
     NSMutableDictionary* paramsDict = [[NSMutableDictionary alloc] initWithCapacity:0];
-    
-    
+    [paramsDict setObject:KEY_API forKey:@"apikey"];
+    [paramsDict setObject:@"iOS" forKey:@"os"];
+    [paramsDict setObject:[UIDevice currentDevice].model forKey:@"device"];
+    [paramsDict setObject:[[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleShortVersionString"] forKey:@"appversion"];
+    [paramsDict setObject:@"IOS" forKey:@"mobileapptype"];
     
     [[EDOperationHandler sharedInstance] getAuthTokenForApp:paramsDict WithCompletionBlock:^(NSMutableDictionary *dict, NSError *error) {
         //
         if(error)
         {
+            [[CommonBL sharedInstance] showErrorAlertWithMessage:[error localizedDescription]];
         }
-            
     }];
 }
 

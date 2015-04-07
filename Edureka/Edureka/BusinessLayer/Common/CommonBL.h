@@ -12,5 +12,6 @@
 +(CommonBL*)sharedInstance;
 
 -(void) parseAppAuthData:(NSMutableDictionary*) dictionary;
+-(BOOL) isAuthTokenAvailable;
 -(void) showErrorAlertWithMessage:(NSString*) messageStr;
 @end

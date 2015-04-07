@@ -39,7 +39,7 @@
 @implementation AFHTTPRequestOperationManager
 
 + (instancetype)manager {
-    return [[self alloc] initWithBaseURL:nil];
+    return [[self alloc] initWithBaseURL:[NSURL URLWithString:@"https://dev.edurekaglobal.com/api/1.0/"]];
 }
 
 - (instancetype)init {
