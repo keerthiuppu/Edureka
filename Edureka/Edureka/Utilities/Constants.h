@@ -12,8 +12,9 @@
 #define APP_NAME        @"Edureka"
 #define APP_DELEGATE    (AppDelegate*)[UIApplication sharedApplication].delegate
 
-#define BASE_URL        @"https://dev.edurekaglobal.com/"
+//#define BASE_URL        @"https://dev.edurekaglobal.com/"
 
+#define BASE_URL [KelltonSettings clientServiceURL]
 #define AUTH_URL        @"api/1.0/authapi"
 
 

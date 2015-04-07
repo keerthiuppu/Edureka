@@ -8,6 +8,7 @@
 
 #ifndef Edureka_Edureka_Prefix_pch
 #define Edureka_Edureka_Prefix_pch
+#import "KelltonSettings.h"
 #import "AppDelegate.h"
 #import "Constants.h"
 #import <AFNetworking/AFHTTPRequestOperationManager.h>

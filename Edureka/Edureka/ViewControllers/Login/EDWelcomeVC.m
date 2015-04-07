@@ -11,6 +11,8 @@
 #import "EDRegisterVC.h"
 #import "EDForgotPasswordVC.h"
 #import "AppDelegate.h"
+#import "FBHandler.h"
+#import "LinkedInHandler.h"
 
 @interface EDWelcomeVC ()
 
@@ -67,25 +69,39 @@
 
 -(IBAction)facebookLoginButtonTapped:(id)sender
 {
-    
-    [[NSUserDefaults standardUserDefaults] setObject:@"neeraj.sharma@kelltontech.com" forKey:KEY_USER_EMAIL];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    
-    [APP_DELEGATE configureTabBar];
+    [[FBHandler sharedFBHandler] loginFacebookWithSuccessBlock:^(BOOL success) {
+        //
+        [[FBHandler sharedFBHandler] fetchUserInfoWithSuccessBlock:^(NSDictionary *userInfo) {
+            
+            NSLog(@"Fb Usr info--->%@", [userInfo description]);
+            
+            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:APP_NAME message:[NSString stringWithFormat:@"Welcome, %@ %@", [userInfo objectForKey:@"first_name"], [userInfo objectForKey:@"last_name"]] delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+            [alert show];
+            //
+        } failureBlock:^(NSError *error) {
+            //
+        }];
+        
+    } failureBlock:^(NSError *error) {
+        
+        
+    }];
 }
 
 -(IBAction)linkedInLoginButtonTapped:(id)sender
 {
-    [[NSUserDefaults standardUserDefaults] setObject:@"neeraj.sharma@kelltontech.com" forKey:KEY_USER_EMAIL];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    [APP_DELEGATE configureTabBar];
+    [[LinkedInHandler sharedLinkedInHandler] loginLinkedInForAppWithParams:nil WithCompletionBlock:^(NSDictionary *dict, NSError *error) {
+        
+        NSLog(@"LinkedIn User Info--> %@", [dict description]);
+        //
+    }];
+
 }
 
 -(IBAction)forgotPasswordLoginButtonTapped:(id)sender
 {
     EDForgotPasswordVC* edPasswordVC = [[EDForgotPasswordVC alloc] initWithNibName:@"EDForgotPasswordVC" bundle:nil];
     [self.navigationController pushViewController:edPasswordVC animated:YES];
-
 }
 
 @end

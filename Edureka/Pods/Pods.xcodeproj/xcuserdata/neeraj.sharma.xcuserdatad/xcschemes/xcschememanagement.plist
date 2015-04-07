@@ -9,6 +9,21 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-Edureka-Bolts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Edureka-Facebook-iOS-SDK.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Edureka-IOSLinkedInAPI.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Edureka-SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,22 +42,37 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>5351EE50904BFB0DB05373EC</key>
+		<key>04DE121DAFC20D4FD0A7BF60</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7EA38BF69DC0B66D8548B212</key>
+		<key>54CC4EDF65DE5D0D795F61AA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>98D3FF595851F8354C823A22</key>
+		<key>594D5C150115061925E9CBA0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CF7753297359AA3EED3D6D1B</key>
+		<key>93DA4DFE122AE4A89DC1640C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A69CB4B285D97F1BDCF7AA7E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B9A485000666480A1F2577BA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DC38E06A5EDB0EB3F6F6A629</key>
 		<dict>
 			<key>primary</key>
 			<true/>

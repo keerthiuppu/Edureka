@@ -15,6 +15,7 @@
 #import "EDSettingsVC.h"
 #import "EDCommunityVC.h"
 #import "EDOperationHandler.h"
+#import <FacebookSDK/FacebookSDK.h>
 
 @interface AppDelegate ()
 {
@@ -30,7 +31,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [self configureNavigationBar];
-    
+    [self getAppAthToken];
     
     //    NSLocale *locale = [NSLocale currentLocale];
     //    NSArray *countryArray = [NSLocale ISOCountryCodes];
@@ -64,7 +65,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     EDWelcomeVC* edWelcomeVC = [[EDWelcomeVC alloc] initWithNibName:@"EDWelcomeVC" bundle:nil];
     navController = [[UINavigationController alloc] initWithRootViewController:edWelcomeVC];
-    [self.window addSubview:navController.view];
+    [self.window setRootViewController:navController];
     [self.window makeKeyAndVisible];
     
     return YES;
@@ -94,15 +95,17 @@
 #pragma mark- Get App Auth Token
 -(void) getAppAthToken
 {
-//    NSMutableDictionary* paramsDict = [[NSMutableDictionary alloc] initWithCapacity:0];
-//    
-//    
-//    
-//    [[EDOperationHandler sharedInstance] getAuthTokenForApp:paramsDict WithCompletionBlock:^(NSMutableDictionary *dict, NSError *error) {
-//        //
-//        if(error)
-//            
-//    }];
+    NSMutableDictionary* paramsDict = [[NSMutableDictionary alloc] initWithCapacity:0];
+    
+    
+    
+    [[EDOperationHandler sharedInstance] getAuthTokenForApp:paramsDict WithCompletionBlock:^(NSMutableDictionary *dict, NSError *error) {
+        //
+        if(error)
+        {
+        }
+            
+    }];
 }
 
 #pragma mark UI Configuration
@@ -205,6 +208,15 @@
         [loadingView setFrame:CGRectMake(self.window.frame.origin.x, self.window.frame.size.height, self.window.frame.size.width, self.window.frame.size.height)];
     }];
     
+}
+
+#pragma mark - Open URL
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
+    
+    NSLog(@"openURL = %@ sourceApplication= %@",url.absoluteString,sourceApplication);//
+    
+    return [FBAppCall handleOpenURL:url sourceApplication:sourceApplication];
 }
 
 @end

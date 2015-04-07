@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5351EE50904BFB0DB05373EC"
+               BlueprintIdentifier = "54CC4EDF65DE5D0D795F61AA"
                BuildableName = "libPods-Edureka-iCarousel.a"
                BlueprintName = "Pods-Edureka-iCarousel"
                ReferencedContainer = "container:Pods.xcodeproj">

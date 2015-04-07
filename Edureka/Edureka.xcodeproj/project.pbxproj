@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		152215431AD3B11400E50102 /* KelltonSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 152215411AD3B11400E50102 /* KelltonSettings.m */; };
+		152215441AD3B11400E50102 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 152215421AD3B11400E50102 /* Settings.bundle */; };
+		152215481AD3C21800E50102 /* FBHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 152215471AD3C21800E50102 /* FBHandler.m */; };
+		1522154C1AD3D33600E50102 /* LinkedInHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1522154B1AD3D33600E50102 /* LinkedInHandler.m */; };
 		15510BC81ACF126D008CAA88 /* EDCommunityVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 15510BC61ACF126D008CAA88 /* EDCommunityVC.m */; };
 		15510BC91ACF126D008CAA88 /* EDCommunityVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15510BC71ACF126D008CAA88 /* EDCommunityVC.xib */; };
 		15510BCE1ACF1274008CAA88 /* TicketCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 15510BCC1ACF1274008CAA88 /* TicketCell.m */; };
@@ -94,6 +98,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		152215401AD3B11400E50102 /* KelltonSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KelltonSettings.h; sourceTree = "<group>"; };
+		152215411AD3B11400E50102 /* KelltonSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KelltonSettings.m; sourceTree = "<group>"; };
+		152215421AD3B11400E50102 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		152215461AD3C21800E50102 /* FBHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBHandler.h; sourceTree = "<group>"; };
+		152215471AD3C21800E50102 /* FBHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBHandler.m; sourceTree = "<group>"; };
+		1522154A1AD3D33600E50102 /* LinkedInHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedInHandler.h; sourceTree = "<group>"; };
+		1522154B1AD3D33600E50102 /* LinkedInHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedInHandler.m; sourceTree = "<group>"; };
 		15510BC51ACF126D008CAA88 /* EDCommunityVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDCommunityVC.h; sourceTree = "<group>"; };
 		15510BC61ACF126D008CAA88 /* EDCommunityVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDCommunityVC.m; sourceTree = "<group>"; };
 		15510BC71ACF126D008CAA88 /* EDCommunityVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EDCommunityVC.xib; sourceTree = "<group>"; };
@@ -230,6 +241,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1522153F1AD3B11400E50102 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				152215401AD3B11400E50102 /* KelltonSettings.h */,
+				152215411AD3B11400E50102 /* KelltonSettings.m */,
+				152215421AD3B11400E50102 /* Settings.bundle */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		152215451AD3C21800E50102 /* FacebookHandler */ = {
+			isa = PBXGroup;
+			children = (
+				152215461AD3C21800E50102 /* FBHandler.h */,
+				152215471AD3C21800E50102 /* FBHandler.m */,
+			);
+			path = FacebookHandler;
+			sourceTree = "<group>";
+		};
+		152215491AD3D30700E50102 /* LinkedInHandler */ = {
+			isa = PBXGroup;
+			children = (
+				1522154A1AD3D33600E50102 /* LinkedInHandler.h */,
+				1522154B1AD3D33600E50102 /* LinkedInHandler.m */,
+			);
+			path = LinkedInHandler;
+			sourceTree = "<group>";
+		};
 		15510BC41ACF126D008CAA88 /* Community */ = {
 			isa = PBXGroup;
 			children = (
@@ -445,6 +484,9 @@
 		1583AF651AB80BDB0000631C /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				152215491AD3D30700E50102 /* LinkedInHandler */,
+				152215451AD3C21800E50102 /* FacebookHandler */,
+				1522153F1AD3B11400E50102 /* Settings */,
 				15FA91311AC352A500152E90 /* UIThumbView */,
 				1554B0FC1AC04C6300B41289 /* Constants.h */,
 			);
@@ -683,6 +725,7 @@
 				1583AF301AB80B1D0000631C /* Frameworks */,
 				1583AF311AB80B1D0000631C /* Resources */,
 				4D87A01202167AE8906963EB /* Copy Pods Resources */,
+				1522153E1AD3B0F300E50102 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -781,6 +824,7 @@
 				15E626261ABDE33700F886E8 /* Default@2x.png in Resources */,
 				15E626241ABDE33700F886E8 /* Default-6.png in Resources */,
 				1554B0D91AC046F700B41289 /* EDRegisterVC.xib in Resources */,
+				152215441AD3B11400E50102 /* Settings.bundle in Resources */,
 				1554B0E31AC0473E00B41289 /* EDForgotPasswordVC.xib in Resources */,
 				1554B1101AC06D5800B41289 /* backBtn@2x.png in Resources */,
 				1554B1111AC06D5800B41289 /* backBtn@3x.png in Resources */,
@@ -804,6 +848,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1522153E1AD3B0F300E50102 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#cd \"$CODESIGNING_FOLDER_PATH/Settings.bundle\"\n#/usr/libexec/PlistBuddy -c  \"Set     :PreferenceSpecifiers:9:DefaultValue $REV\" \"Root.plist\"";
+		};
 		4D87A01202167AE8906963EB /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -853,8 +910,10 @@
 				1554B0D81AC046F700B41289 /* EDRegisterVC.m in Sources */,
 				15510BE31ACF1F95008CAA88 /* EDMyCourseCell.m in Sources */,
 				15FA91441AC3F6F000152E90 /* UserBL.m in Sources */,
+				152215481AD3C21800E50102 /* FBHandler.m in Sources */,
 				15FA91581AC404E900152E90 /* CourseBL.m in Sources */,
 				15510BED1ACF2967008CAA88 /* EDContentDownloadVC.m in Sources */,
+				152215431AD3B11400E50102 /* KelltonSettings.m in Sources */,
 				1554B0F51AC047ED00B41289 /* EDMyCourseVC.m in Sources */,
 				15510C0D1ACFDB1D008CAA88 /* EDOperationHandler.m in Sources */,
 				15FA91471AC3FCB800152E90 /* EDCourseView.m in Sources */,
@@ -874,6 +933,7 @@
 				1554B1011AC050A200B41289 /* EDSettingsVC.m in Sources */,
 				15FA91291AC3506B00152E90 /* Categories.m in Sources */,
 				1583AF391AB80B1D0000631C /* main.m in Sources */,
+				1522154C1AD3D33600E50102 /* LinkedInHandler.m in Sources */,
 				15510BE81ACF281E008CAA88 /* EDProfileVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
