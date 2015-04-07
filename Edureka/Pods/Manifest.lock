@@ -1,11 +1,11 @@
 PODS:
   - AFNetworking (2.5.1):
-    - AFNetworking/NSURLConnection
-    - AFNetworking/NSURLSession
-    - AFNetworking/Reachability
-    - AFNetworking/Security
-    - AFNetworking/Serialization
-    - AFNetworking/UIKit
+    - AFNetworking/NSURLConnection (= 2.5.1)
+    - AFNetworking/NSURLSession (= 2.5.1)
+    - AFNetworking/Reachability (= 2.5.1)
+    - AFNetworking/Security (= 2.5.1)
+    - AFNetworking/Serialization (= 2.5.1)
+    - AFNetworking/UIKit (= 2.5.1)
   - AFNetworking/NSURLConnection (2.5.1):
     - AFNetworking/Reachability
     - AFNetworking/Security
@@ -22,7 +22,7 @@ PODS:
     - AFNetworking/NSURLSession
   - iCarousel (1.8.1)
   - SDWebImage (3.7.2):
-    - SDWebImage/Core
+    - SDWebImage/Core (= 3.7.2)
   - SDWebImage/Core (3.7.2)
 
 DEPENDENCIES:
@@ -31,8 +31,8 @@ DEPENDENCIES:
   - SDWebImage (~> 3.7)
 
 SPEC CHECKSUMS:
-  AFNetworking: 8bee59492a6ff15d69130efa4d0dc67e0094a52a
-  iCarousel: 5acab560f10dc13da2440c89f35a0ad278b5147d
+  AFNetworking: 10e85a00bb0f475124e4ff2677bf15693b2c1523
+  iCarousel: dace1cb858e3f4dc2614bee3201041247f82feda
   SDWebImage: 71b7cdc1d1721d6a82ed62889030225f2c249e29
 
-COCOAPODS: 0.34.4
+COCOAPODS: 0.35.0
