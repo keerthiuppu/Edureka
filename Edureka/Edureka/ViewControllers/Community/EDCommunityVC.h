@@ -10,4 +10,8 @@
 
 @interface EDCommunityVC : UIViewController
 
+
+- (IBAction)segementControlSelected:(id)sender;
+
+
 @end

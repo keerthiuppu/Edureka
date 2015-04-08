@@ -14,6 +14,8 @@
 {
     IBOutlet UITableView* ticketTableView;
 
+    __weak IBOutlet UISegmentedControl *segmentedControl;
+    BOOL hi;
 }
 @end
 
@@ -22,7 +24,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self configureView];
+    [self addRightMenuButton];
     [self registerCellsForTableView];
 
     // Do any additional setup after loading the view from its nib.
@@ -37,11 +39,19 @@
 {
 }
 
--(IBAction)segementControlSelected:(id)sender
-{
 
+- (void)addRightMenuButton{
+    if (self.navigationItem.rightBarButtonItem == nil){
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"+" style:UIBarButtonItemStylePlain target:self action:@selector(addTicketButtonTapped:)];
+    }
 }
 
+-(IBAction)addTicketButtonTapped:(id)sender
+{
+
+    
+    
+}
 
 #pragma mark - UI Configuration
 - (void)registerCellsForTableView
@@ -55,7 +65,8 @@
 #pragma mark - UItableViewDelegate & Datasource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 4;
+        return 4;
+
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -71,6 +82,16 @@
     return 115.0f;
 }
 
-
-
+- (IBAction)segementControlSelected:(id)sender {
+   
+    if(segmentedControl.selectedSegmentIndex == 0)
+        {
+          
+        }
+    else
+    {
+        NSLog(@"index 1");
+    }
+    
+}
 @end
