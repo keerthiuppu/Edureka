@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EDLoginVC : UIViewController
+@interface EDLoginVC : UIViewController<UITextFieldDelegate>
 
 @end

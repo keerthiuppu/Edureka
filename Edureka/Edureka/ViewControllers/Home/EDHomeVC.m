@@ -73,18 +73,33 @@
     [self addRightMenuButton];
     [self addLeftMenuButton];
     
-    [self.navigationItem setTitleView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"edurekaLogo"]]];
+    UILabel* titleLabel =[[UILabel alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 200.0f, 40.0f)];
+    [titleLabel setText:@"Home"];
+    [titleLabel setTextAlignment:NSTextAlignmentCenter];
+    [titleLabel setTextColor:[UIColor whiteColor]];
+    [titleLabel setFont:[UIFont boldSystemFontOfSize:16.0f]];
+    [self.navigationItem setTitleView:titleLabel];
+//    
+//    [self.navigationItem setTitleView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"edurekaLogo"]]];
 }
 
 - (void)addLeftMenuButton{
     if (self.navigationItem.leftBarButtonItem == nil){
         self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Categories" style:UIBarButtonItemStylePlain target:self action:@selector(categoriesButtonTapped)];
+        UIFont * font = [UIFont systemFontOfSize:14.0f];
+        NSDictionary * attributes = @{NSFontAttributeName: font};
+        [self.navigationItem.leftBarButtonItem setTitleTextAttributes:attributes forState:UIControlStateNormal];
     }
 }
 
 - (void)addRightMenuButton{
-    if (self.navigationItem.rightBarButtonItem == nil){
-        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(searchButtontapped)];
+    if (self.navigationItem.rightBarButtonItem == nil)
+    {
+        UIBarButtonItem* wishListBarButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(searchButtontapped)];
+       
+         UIBarButtonItem* searchBarButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(searchButtontapped)];
+    
+        self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:searchBarButton, wishListBarButton, nil];
     }
 }
 

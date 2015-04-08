@@ -19,6 +19,9 @@
 
 - (void)logoutUserWithParams:(NSMutableDictionary*)params WithCompletionBlock:(void (^)(NSMutableDictionary *dict, NSError *error))completionBlock;
 
+- (void)forgotPasswordWithParams:(NSMutableDictionary*)params WithCompletionBlock:(void (^)(NSMutableDictionary *dict, NSError *error))completionBlock;
+
+- (void)getCategoriesWithParams:(NSMutableDictionary*)params WithCompletionBlock:(void (^)(NSMutableArray *categoryArray, NSError *error))completionBlock;
 
 
 @end

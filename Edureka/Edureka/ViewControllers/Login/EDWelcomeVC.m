@@ -108,6 +108,7 @@
     [[LinkedInHandler sharedLinkedInHandler] loginLinkedInForAppWithParams:nil WithCompletionBlock:^(NSDictionary *dict, NSError *error) {
         
         NSLog(@"LinkedIn User Info--> %@", [dict description]);
+        [[CommonBL sharedInstance] showErrorAlertWithMessage:[NSString stringWithFormat:@"Welcome %@ %@", [dict objectForKey:@"firstName"], [dict objectForKey:@"lastName"]]];
         //
     }];
 

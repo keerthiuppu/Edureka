@@ -143,6 +143,11 @@
     [navController pushViewController:self.tabBarController animated:NO];
 }
 
+-(void) navigateToLoginScreen
+{
+    [navController popToRootViewControllerAnimated:YES];
+}
+
 #pragma mark - Loading Bar
 -(void) showLoadingBar
 {
@@ -158,7 +163,7 @@
         //        [loadingView addSubview:activityView];
         
         
-        UIImageView* cabImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"edureka"]];
+        UIImageView* cabImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"edurekaLogo"]];
         [cabImageView setCenter:loadingView.center];
         [loadingView addSubview:cabImageView];
         
@@ -203,5 +208,7 @@
     
     return [FBAppCall handleOpenURL:url sourceApplication:sourceApplication];
 }
+
+
 
 @end

@@ -185,7 +185,12 @@
     
     [[EDOperationHandler sharedInstance] logoutUserWithParams:dictionary WithCompletionBlock:^(NSMutableDictionary *dict, NSError *error) {
         //
+        [[NSUserDefaults standardUserDefaults] removeObjectForKey:KEY_USER_EMAIL];
+        [[NSUserDefaults standardUserDefaults] synchronize];
         
+        [APP_DELEGATE hideLoadingBar];
+        [APP_DELEGATE navigateToLoginScreen];
+    
     }];
 }
 

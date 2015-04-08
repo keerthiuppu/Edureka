@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EDForgotPasswordVC : UIViewController
+@interface EDForgotPasswordVC : UIViewController<UIAlertViewDelegate>
 
 @end

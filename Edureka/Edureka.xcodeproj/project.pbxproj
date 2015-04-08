@@ -7,13 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-
+		147022031AD3BCB600448679 /* EDSearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 147022011AD3BCB600448679 /* EDSearchVC.m */; };
+		147022041AD3BCB600448679 /* EDSearchVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 147022021AD3BCB600448679 /* EDSearchVC.xib */; };
 		152215431AD3B11400E50102 /* KelltonSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 152215411AD3B11400E50102 /* KelltonSettings.m */; };
 		152215441AD3B11400E50102 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 152215421AD3B11400E50102 /* Settings.bundle */; };
 		152215481AD3C21800E50102 /* FBHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 152215471AD3C21800E50102 /* FBHandler.m */; };
 		1522154C1AD3D33600E50102 /* LinkedInHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1522154B1AD3D33600E50102 /* LinkedInHandler.m */; };
-		147022031AD3BCB600448679 /* EDSearchVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 147022011AD3BCB600448679 /* EDSearchVC.m */; };
-		147022041AD3BCB600448679 /* EDSearchVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 147022021AD3BCB600448679 /* EDSearchVC.xib */; };
 		15510BC81ACF126D008CAA88 /* EDCommunityVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 15510BC61ACF126D008CAA88 /* EDCommunityVC.m */; };
 		15510BC91ACF126D008CAA88 /* EDCommunityVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15510BC71ACF126D008CAA88 /* EDCommunityVC.xib */; };
 		15510BCE1ACF1274008CAA88 /* TicketCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 15510BCC1ACF1274008CAA88 /* TicketCell.m */; };
@@ -63,6 +62,11 @@
 		1583AF441AB80B1D0000631C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1583AF431AB80B1D0000631C /* Images.xcassets */; };
 		1583AF531AB80B1E0000631C /* EdurekaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1583AF521AB80B1E0000631C /* EdurekaTests.m */; };
 		1583AF691AB80BDB0000631C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1583AF621AB80BDB0000631C /* AppDelegate.m */; };
+		15BE50E31AD5187100493A87 /* localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 15BE50E11AD5187100493A87 /* localizable.strings */; };
+		15BE50EE1AD5262C00493A87 /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BE50E71AD5262C00493A87 /* TPKeyboardAvoidingCollectionView.m */; };
+		15BE50EF1AD5262C00493A87 /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BE50E91AD5262C00493A87 /* TPKeyboardAvoidingScrollView.m */; };
+		15BE50F01AD5262C00493A87 /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BE50EB1AD5262C00493A87 /* TPKeyboardAvoidingTableView.m */; };
+		15BE50F11AD5262C00493A87 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 15BE50ED1AD5262C00493A87 /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
 		15E626231ABDE33700F886E8 /* Default-568h.png in Resources */ = {isa = PBXBuildFile; fileRef = 15E6261E1ABDE33700F886E8 /* Default-568h.png */; };
 		15E626241ABDE33700F886E8 /* Default-6.png in Resources */ = {isa = PBXBuildFile; fileRef = 15E6261F1ABDE33700F886E8 /* Default-6.png */; };
 		15E626251ABDE33700F886E8 /* Default-6Plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 15E626201ABDE33700F886E8 /* Default-6Plus.png */; };
@@ -101,6 +105,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		147022001AD3BCB600448679 /* EDSearchVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDSearchVC.h; sourceTree = "<group>"; };
+		147022011AD3BCB600448679 /* EDSearchVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDSearchVC.m; sourceTree = "<group>"; };
+		147022021AD3BCB600448679 /* EDSearchVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EDSearchVC.xib; sourceTree = "<group>"; };
 		152215401AD3B11400E50102 /* KelltonSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KelltonSettings.h; sourceTree = "<group>"; };
 		152215411AD3B11400E50102 /* KelltonSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KelltonSettings.m; sourceTree = "<group>"; };
 		152215421AD3B11400E50102 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
@@ -108,9 +115,6 @@
 		152215471AD3C21800E50102 /* FBHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBHandler.m; sourceTree = "<group>"; };
 		1522154A1AD3D33600E50102 /* LinkedInHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedInHandler.h; sourceTree = "<group>"; };
 		1522154B1AD3D33600E50102 /* LinkedInHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedInHandler.m; sourceTree = "<group>"; };
-		147022001AD3BCB600448679 /* EDSearchVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDSearchVC.h; sourceTree = "<group>"; };
-		147022011AD3BCB600448679 /* EDSearchVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDSearchVC.m; sourceTree = "<group>"; };
-		147022021AD3BCB600448679 /* EDSearchVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EDSearchVC.xib; sourceTree = "<group>"; };
 		15510BC51ACF126D008CAA88 /* EDCommunityVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDCommunityVC.h; sourceTree = "<group>"; };
 		15510BC61ACF126D008CAA88 /* EDCommunityVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDCommunityVC.m; sourceTree = "<group>"; };
 		15510BC71ACF126D008CAA88 /* EDCommunityVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EDCommunityVC.xib; sourceTree = "<group>"; };
@@ -189,6 +193,15 @@
 		1583AF5F1AB80BC00000631C /* Edureka-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Edureka-Prefix.pch"; sourceTree = "<group>"; };
 		1583AF611AB80BDB0000631C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1583AF621AB80BDB0000631C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		15BE50E11AD5187100493A87 /* localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = localizable.strings; sourceTree = "<group>"; };
+		15BE50E61AD5262C00493A87 /* TPKeyboardAvoidingCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingCollectionView.h; sourceTree = "<group>"; };
+		15BE50E71AD5262C00493A87 /* TPKeyboardAvoidingCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingCollectionView.m; sourceTree = "<group>"; };
+		15BE50E81AD5262C00493A87 /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
+		15BE50E91AD5262C00493A87 /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
+		15BE50EA1AD5262C00493A87 /* TPKeyboardAvoidingTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingTableView.h; sourceTree = "<group>"; };
+		15BE50EB1AD5262C00493A87 /* TPKeyboardAvoidingTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingTableView.m; sourceTree = "<group>"; };
+		15BE50EC1AD5262C00493A87 /* UIScrollView+TPKeyboardAvoidingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TPKeyboardAvoidingAdditions.h"; sourceTree = "<group>"; };
+		15BE50ED1AD5262C00493A87 /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
 		15E6261E1ABDE33700F886E8 /* Default-568h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h.png"; sourceTree = "<group>"; };
 		15E6261F1ABDE33700F886E8 /* Default-6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-6.png"; sourceTree = "<group>"; };
 		15E626201ABDE33700F886E8 /* Default-6Plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-6Plus.png"; sourceTree = "<group>"; };
@@ -493,11 +506,13 @@
 		1583AF651AB80BDB0000631C /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				15BE50E51AD5262C00493A87 /* TPKeyboardAvoiding */,
 				152215491AD3D30700E50102 /* LinkedInHandler */,
 				152215451AD3C21800E50102 /* FacebookHandler */,
 				1522153F1AD3B11400E50102 /* Settings */,
 				15FA91311AC352A500152E90 /* UIThumbView */,
 				1554B0FC1AC04C6300B41289 /* Constants.h */,
+				15BE50E11AD5187100493A87 /* localizable.strings */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -515,6 +530,21 @@
 				15EC83951ABAD14600DE941E /* Search */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		15BE50E51AD5262C00493A87 /* TPKeyboardAvoiding */ = {
+			isa = PBXGroup;
+			children = (
+				15BE50E61AD5262C00493A87 /* TPKeyboardAvoidingCollectionView.h */,
+				15BE50E71AD5262C00493A87 /* TPKeyboardAvoidingCollectionView.m */,
+				15BE50E81AD5262C00493A87 /* TPKeyboardAvoidingScrollView.h */,
+				15BE50E91AD5262C00493A87 /* TPKeyboardAvoidingScrollView.m */,
+				15BE50EA1AD5262C00493A87 /* TPKeyboardAvoidingTableView.h */,
+				15BE50EB1AD5262C00493A87 /* TPKeyboardAvoidingTableView.m */,
+				15BE50EC1AD5262C00493A87 /* UIScrollView+TPKeyboardAvoidingAdditions.h */,
+				15BE50ED1AD5262C00493A87 /* UIScrollView+TPKeyboardAvoidingAdditions.m */,
+			);
+			path = TPKeyboardAvoiding;
 			sourceTree = "<group>";
 		};
 		15E6261A1ABDE33700F886E8 /* Images */ = {
@@ -834,6 +864,7 @@
 				15E626241ABDE33700F886E8 /* Default-6.png in Resources */,
 				1554B0D91AC046F700B41289 /* EDRegisterVC.xib in Resources */,
 				152215441AD3B11400E50102 /* Settings.bundle in Resources */,
+				15BE50E31AD5187100493A87 /* localizable.strings in Resources */,
 				1554B0E31AC0473E00B41289 /* EDForgotPasswordVC.xib in Resources */,
 				1554B1101AC06D5800B41289 /* backBtn@2x.png in Resources */,
 				1554B1111AC06D5800B41289 /* backBtn@3x.png in Resources */,
@@ -909,6 +940,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				15510BC81ACF126D008CAA88 /* EDCommunityVC.m in Sources */,
+				15BE50EF1AD5262C00493A87 /* TPKeyboardAvoidingScrollView.m in Sources */,
 				15FA91391AC3F3E100152E90 /* CategoryCell.m in Sources */,
 				15FA91171AC3383300152E90 /* CommonBL.m in Sources */,
 				1554B0FA1AC0480800B41289 /* EDHomeVC.m in Sources */,
@@ -931,12 +963,14 @@
 				15510BF21ACF29F7008CAA88 /* EDAboutVC.m in Sources */,
 				1554B0E21AC0473E00B41289 /* EDForgotPasswordVC.m in Sources */,
 				1554B0F01AC047DA00B41289 /* EDTicketVC.m in Sources */,
+				15BE50F01AD5262C00493A87 /* TPKeyboardAvoidingTableView.m in Sources */,
 				15510C021ACF3375008CAA88 /* EDCourseDetailVC.m in Sources */,
 				1583AF691AB80BDB0000631C /* AppDelegate.m in Sources */,
 				15510BFD1ACF2CE6008CAA88 /* EDRedeemVC.m in Sources */,
 				15FA911B1AC34BD100152E90 /* CategoriesBL.m in Sources */,
 				15FA913F1AC3F40F00152E90 /* EDHomeCarouselCell.m in Sources */,
 				15510BF71ACF2AF3008CAA88 /* EDCommonWebViewVC.m in Sources */,
+				15BE50F11AD5262C00493A87 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				15510C071ACF338E008CAA88 /* EDMyCourseDetailVC.m in Sources */,
 				15510BCE1ACF1274008CAA88 /* TicketCell.m in Sources */,
 				15510BD31ACF1599008CAA88 /* EDCourseCell.m in Sources */,
@@ -945,6 +979,7 @@
 				15FA91291AC3506B00152E90 /* Categories.m in Sources */,
 				1583AF391AB80B1D0000631C /* main.m in Sources */,
 				1522154C1AD3D33600E50102 /* LinkedInHandler.m in Sources */,
+				15BE50EE1AD5262C00493A87 /* TPKeyboardAvoidingCollectionView.m in Sources */,
 				15510BE81ACF281E008CAA88 /* EDProfileVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

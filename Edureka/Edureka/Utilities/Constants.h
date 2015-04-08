@@ -16,10 +16,13 @@
 
 #define BASE_URL [KelltonSettings clientServiceURL]
 
-#define AUTH_URL         @"authapi"
-#define LOGIN_URL        @"users/login"
-#define REGISTER_URL     @"users/registration"
-#define LOGOUT_URL       @"users/logout"
+#define AUTH_URL            @"authapi"
+#define LOGIN_URL           @"users/login"
+#define REGISTER_URL        @"users/registration"
+#define LOGOUT_URL          @"users/logout"
+#define FORGOT_PASSWORD_URL @"users/forgotPassword"
+
+#define CATEGORIES_URL      @"courses/getCategories"
 
 
 #define COLOR_NAVIGATION_BAR   [UIColor colorWithRed:27.0/255.0f green:81.0f/255.0f blue:150.0f/255.0f alpha:1.0f]
