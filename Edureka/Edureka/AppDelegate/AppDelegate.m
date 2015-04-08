@@ -137,7 +137,10 @@
     //initialize the tab bar controller
     self.tabBarController = [[UITabBarController alloc] init];
     [self.tabBarController setViewControllers:viewControllers];
-    [self.window addSubview:self.tabBarController.view];
+    //[self.window addSubview:self.tabBarController.view];
+   // [navController setNavigationBarHidden:YES];
+    [navController setNavigationBarHidden:YES];
+    [navController pushViewController:self.tabBarController animated:NO];
 }
 
 #pragma mark - Loading Bar
@@ -155,7 +158,7 @@
         //        [loadingView addSubview:activityView];
         
         
-        UIImageView* cabImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"wobbleCab.png"]];
+        UIImageView* cabImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"edureka"]];
         [cabImageView setCenter:loadingView.center];
         [loadingView addSubview:cabImageView];
         

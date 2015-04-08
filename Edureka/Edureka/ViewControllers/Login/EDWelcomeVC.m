@@ -13,6 +13,7 @@
 #import "AppDelegate.h"
 #import "FBHandler.h"
 #import "LinkedInHandler.h"
+#import "UserBL.h"
 
 @interface EDWelcomeVC ()
 
@@ -26,6 +27,8 @@
     
     [super viewDidLoad];
     
+    if([[UserBL sharedInstance] isUserLoggedIn])
+        [APP_DELEGATE configureTabBar];
     
    // [self configureNavigationBar];
     // Do any additional setup after loading the view from its nib.
