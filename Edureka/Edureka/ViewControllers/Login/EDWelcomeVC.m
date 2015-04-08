@@ -25,7 +25,9 @@
     
     
     [super viewDidLoad];
-    [self configureNavigationBar];
+    
+    
+   // [self configureNavigationBar];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -35,9 +37,9 @@
 }
 
 #pragma mark - UInavigationBar Configuration
--(void) configureNavigationBar
+/*-(void) configureNavigationBar
 {
-    [self addRightMenuButton];
+   [self addRightMenuButton];
     
     [self.navigationItem setTitleView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"edurekaLogo"]]];
     
@@ -47,6 +49,16 @@
     if (self.navigationItem.rightBarButtonItem == nil){
         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Browse" style:UIBarButtonItemStylePlain target:self action:@selector(browseButtonTapped)];
     }
+} */
+
+- (void)viewWillAppear:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
+    [super viewWillAppear:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
+    [super viewWillDisappear:animated];
 }
 
 -(void) browseButtonTapped

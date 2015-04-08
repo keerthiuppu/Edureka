@@ -32,7 +32,7 @@
 {
     [self configureNavigationBar];
     
-    if(![[CommonBL sharedInstance] isAuthTokenAvailable])
+  if(![[CommonBL sharedInstance] isAuthTokenAvailable])
         [self getAppAthToken];
 
     
@@ -81,6 +81,11 @@
         if(error)
         {
             [[CommonBL sharedInstance] showErrorAlertWithMessage:[error localizedDescription]];
+        }
+        
+        else
+        {
+            NSLog(@"%@",dict);
         }
     }];
 }
