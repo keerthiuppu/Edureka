@@ -58,6 +58,14 @@
 		1554B10D1AC06C8500B41289 /* EDCategoriesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1554B10B1AC06C8500B41289 /* EDCategoriesVC.xib */; };
 		1554B1101AC06D5800B41289 /* backBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1554B10E1AC06D5800B41289 /* backBtn@2x.png */; };
 		1554B1111AC06D5800B41289 /* backBtn@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1554B10F1AC06D5800B41289 /* backBtn@3x.png */; };
+		156CA1961AD5CAA500F1BAAC /* HomeCourse.m in Sources */ = {isa = PBXBuildFile; fileRef = 156CA1951AD5CAA500F1BAAC /* HomeCourse.m */; };
+		156CA1A11AD5D64400F1BAAC /* ASStarRatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 156CA1991AD5D64400F1BAAC /* ASStarRatingView.m */; };
+		156CA1A21AD5D64400F1BAAC /* half_selected_star.png in Resources */ = {isa = PBXBuildFile; fileRef = 156CA19B1AD5D64400F1BAAC /* half_selected_star.png */; };
+		156CA1A31AD5D64400F1BAAC /* half_selected_star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 156CA19C1AD5D64400F1BAAC /* half_selected_star@2x.png */; };
+		156CA1A41AD5D64400F1BAAC /* not_selected_star.png in Resources */ = {isa = PBXBuildFile; fileRef = 156CA19D1AD5D64400F1BAAC /* not_selected_star.png */; };
+		156CA1A51AD5D64400F1BAAC /* not_selected_star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 156CA19E1AD5D64400F1BAAC /* not_selected_star@2x.png */; };
+		156CA1A61AD5D64400F1BAAC /* selected_star.png in Resources */ = {isa = PBXBuildFile; fileRef = 156CA19F1AD5D64400F1BAAC /* selected_star.png */; };
+		156CA1A71AD5D64400F1BAAC /* selected_star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 156CA1A01AD5D64400F1BAAC /* selected_star@2x.png */; };
 		1583AF391AB80B1D0000631C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1583AF381AB80B1D0000631C /* main.m */; };
 		1583AF441AB80B1D0000631C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1583AF431AB80B1D0000631C /* Images.xcassets */; };
 		1583AF531AB80B1E0000631C /* EdurekaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1583AF521AB80B1E0000631C /* EdurekaTests.m */; };
@@ -183,6 +191,16 @@
 		1554B10B1AC06C8500B41289 /* EDCategoriesVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EDCategoriesVC.xib; sourceTree = "<group>"; };
 		1554B10E1AC06D5800B41289 /* backBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backBtn@2x.png"; sourceTree = "<group>"; };
 		1554B10F1AC06D5800B41289 /* backBtn@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backBtn@3x.png"; sourceTree = "<group>"; };
+		156CA1941AD5CAA500F1BAAC /* HomeCourse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCourse.h; sourceTree = "<group>"; };
+		156CA1951AD5CAA500F1BAAC /* HomeCourse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCourse.m; sourceTree = "<group>"; };
+		156CA1981AD5D64400F1BAAC /* ASStarRatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASStarRatingView.h; sourceTree = "<group>"; };
+		156CA1991AD5D64400F1BAAC /* ASStarRatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASStarRatingView.m; sourceTree = "<group>"; };
+		156CA19B1AD5D64400F1BAAC /* half_selected_star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = half_selected_star.png; sourceTree = "<group>"; };
+		156CA19C1AD5D64400F1BAAC /* half_selected_star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "half_selected_star@2x.png"; sourceTree = "<group>"; };
+		156CA19D1AD5D64400F1BAAC /* not_selected_star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = not_selected_star.png; sourceTree = "<group>"; };
+		156CA19E1AD5D64400F1BAAC /* not_selected_star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "not_selected_star@2x.png"; sourceTree = "<group>"; };
+		156CA19F1AD5D64400F1BAAC /* selected_star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selected_star.png; sourceTree = "<group>"; };
+		156CA1A01AD5D64400F1BAAC /* selected_star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "selected_star@2x.png"; sourceTree = "<group>"; };
 		1583AF331AB80B1D0000631C /* Edureka.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Edureka.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1583AF371AB80B1D0000631C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1583AF381AB80B1D0000631C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -411,6 +429,29 @@
 			path = Database;
 			sourceTree = "<group>";
 		};
+		156CA1971AD5D64400F1BAAC /* ASStarRatingView */ = {
+			isa = PBXGroup;
+			children = (
+				156CA1981AD5D64400F1BAAC /* ASStarRatingView.h */,
+				156CA1991AD5D64400F1BAAC /* ASStarRatingView.m */,
+				156CA19A1AD5D64400F1BAAC /* stars */,
+			);
+			path = ASStarRatingView;
+			sourceTree = "<group>";
+		};
+		156CA19A1AD5D64400F1BAAC /* stars */ = {
+			isa = PBXGroup;
+			children = (
+				156CA19B1AD5D64400F1BAAC /* half_selected_star.png */,
+				156CA19C1AD5D64400F1BAAC /* half_selected_star@2x.png */,
+				156CA19D1AD5D64400F1BAAC /* not_selected_star.png */,
+				156CA19E1AD5D64400F1BAAC /* not_selected_star@2x.png */,
+				156CA19F1AD5D64400F1BAAC /* selected_star.png */,
+				156CA1A01AD5D64400F1BAAC /* selected_star@2x.png */,
+			);
+			path = stars;
+			sourceTree = "<group>";
+		};
 		1583AF2A1AB80B1D0000631C = {
 			isa = PBXGroup;
 			children = (
@@ -506,6 +547,7 @@
 		1583AF651AB80BDB0000631C /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				156CA1971AD5D64400F1BAAC /* ASStarRatingView */,
 				15BE50E51AD5262C00493A87 /* TPKeyboardAvoiding */,
 				152215491AD3D30700E50102 /* LinkedInHandler */,
 				152215451AD3C21800E50102 /* FacebookHandler */,
@@ -605,6 +647,8 @@
 				15FA91281AC3506B00152E90 /* Categories.m */,
 				15FA914A1AC4021400152E90 /* Course.h */,
 				15FA914B1AC4021400152E90 /* Course.m */,
+				156CA1941AD5CAA500F1BAAC /* HomeCourse.h */,
+				156CA1951AD5CAA500F1BAAC /* HomeCourse.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -840,10 +884,13 @@
 				15510BE91ACF281E008CAA88 /* EDProfileVC.xib in Resources */,
 				15FA91491AC3FCCD00152E90 /* EDCourseView.xib in Resources */,
 				15FA91521AC4043300152E90 /* Recommended.plist in Resources */,
+				156CA1A21AD5D64400F1BAAC /* half_selected_star.png in Resources */,
 				15510BE41ACF1F95008CAA88 /* EDMyCourseCell.xib in Resources */,
 				15510BF31ACF29F7008CAA88 /* EDAboutVC.xib in Resources */,
+				156CA1A61AD5D64400F1BAAC /* selected_star.png in Resources */,
 				15510BCF1ACF1274008CAA88 /* TicketCell.xib in Resources */,
 				15FA91541AC4048900152E90 /* Wishlist.plist in Resources */,
+				156CA1A31AD5D64400F1BAAC /* half_selected_star@2x.png in Resources */,
 				15FA91501AC4042200152E90 /* Trending.plist in Resources */,
 				15FA913A1AC3F3E100152E90 /* CategoryCell.xib in Resources */,
 				1554B0FB1AC0480800B41289 /* EDHomeVC.xib in Resources */,
@@ -855,10 +902,13 @@
 				15510BC91ACF126D008CAA88 /* EDCommunityVC.xib in Resources */,
 				1554B0DE1AC0471000B41289 /* EDLoginVC.xib in Resources */,
 				15510BF81ACF2AF3008CAA88 /* EDCommonWebViewVC.xib in Resources */,
+				156CA1A41AD5D64400F1BAAC /* not_selected_star.png in Resources */,
+				156CA1A51AD5D64400F1BAAC /* not_selected_star@2x.png in Resources */,
 				1554B0F11AC047DA00B41289 /* EDTicketVC.xib in Resources */,
 				15E626251ABDE33700F886E8 /* Default-6Plus.png in Resources */,
 				15E626231ABDE33700F886E8 /* Default-568h.png in Resources */,
 				15FA911D1AC34C6800152E90 /* Categories.plist in Resources */,
+				156CA1A71AD5D64400F1BAAC /* selected_star@2x.png in Resources */,
 				15FA914E1AC402B900152E90 /* NewCourses.plist in Resources */,
 				15E626261ABDE33700F886E8 /* Default@2x.png in Resources */,
 				15E626241ABDE33700F886E8 /* Default-6.png in Resources */,
@@ -966,6 +1016,7 @@
 				15BE50F01AD5262C00493A87 /* TPKeyboardAvoidingTableView.m in Sources */,
 				15510C021ACF3375008CAA88 /* EDCourseDetailVC.m in Sources */,
 				1583AF691AB80BDB0000631C /* AppDelegate.m in Sources */,
+				156CA1961AD5CAA500F1BAAC /* HomeCourse.m in Sources */,
 				15510BFD1ACF2CE6008CAA88 /* EDRedeemVC.m in Sources */,
 				15FA911B1AC34BD100152E90 /* CategoriesBL.m in Sources */,
 				15FA913F1AC3F40F00152E90 /* EDHomeCarouselCell.m in Sources */,
@@ -973,6 +1024,7 @@
 				15BE50F11AD5262C00493A87 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				15510C071ACF338E008CAA88 /* EDMyCourseDetailVC.m in Sources */,
 				15510BCE1ACF1274008CAA88 /* TicketCell.m in Sources */,
+				156CA1A11AD5D64400F1BAAC /* ASStarRatingView.m in Sources */,
 				15510BD31ACF1599008CAA88 /* EDCourseCell.m in Sources */,
 				1554B0D31AC046E600B41289 /* EDWelcomeVC.m in Sources */,
 				1554B1011AC050A200B41289 /* EDSettingsVC.m in Sources */,

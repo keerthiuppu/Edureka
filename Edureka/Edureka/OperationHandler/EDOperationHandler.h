@@ -23,5 +23,7 @@
 
 - (void)getCategoriesWithParams:(NSMutableDictionary*)params WithCompletionBlock:(void (^)(NSMutableArray *categoryArray, NSError *error))completionBlock;
 
+- (void)getHomeCoursesWithParams:(NSMutableDictionary*)params WithCompletionBlock:(void (^)(NSMutableArray *courseArray, NSError *error))completionBlock;
+
 
 @end

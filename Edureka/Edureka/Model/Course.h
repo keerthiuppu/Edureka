@@ -16,9 +16,8 @@
 @property(nonatomic, strong) NSString* numberOfLearners;
 @property(nonatomic, strong) NSString* priceUSD;
 @property(nonatomic, strong) NSString* priceINR;
-@property(nonatomic, strong) NSString* discountedPrice;
-
-
+@property(nonatomic, strong) NSString* discountedPriceUSD;
+@property(nonatomic, strong) NSString* discountedPriceINR;
 
 
 -(id) initWithDictionary:(NSMutableDictionary*) dictionary;

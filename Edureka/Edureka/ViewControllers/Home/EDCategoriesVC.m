@@ -117,10 +117,6 @@
     
     Categories* category =[categoriesArr objectAtIndex:indexPath.row];
     [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
-//    [cell.categoryImageView setImageType:@"Category"];
-//    [cell.categoryImageView setImageFromUrlString:category.categoryImageUrl];
-  
-//    [cell.categoryImageView sd_setImageWithURL:[NSURL URLWithString:category.categoryImageUrl] placeholderImage:[UIImage imageNamed:@"edurekaLogo"]];
 
     [cell.categoryNameLabel setText:category.categoryName];
     

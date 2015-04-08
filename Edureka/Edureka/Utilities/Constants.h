@@ -23,6 +23,7 @@
 #define FORGOT_PASSWORD_URL @"users/forgotPassword"
 
 #define CATEGORIES_URL      @"courses/getCategories"
+#define HOME_COURSES_URL    @"courses/getNewCourses"
 
 
 #define COLOR_NAVIGATION_BAR   [UIColor colorWithRed:27.0/255.0f green:81.0f/255.0f blue:150.0f/255.0f alpha:1.0f]
@@ -31,7 +32,7 @@
 #define KEY_SESSION_ID      @"SessionId"
 #define KEY_API             @"Edureka2015"
 
-
+#define K_CAROUSEL_OFFSET               111
 #define TAG_CAROUSEL_TYPE_RECOMMENDED   222
 #define TAG_CAROUSEL_TYPE_WISHLIST      223
 #define TAG_CAROUSEL_TYPE_NEW           224

@@ -9,6 +9,8 @@
 #import "EDOperationHandler.h"
 #import "CommonBL.h"
 #import "UserBL.h"
+#import "CategoriesBL.h"
+#import "CourseBL.h"
 
 @implementation EDOperationHandler
 
@@ -237,17 +239,58 @@ static EDOperationHandler* sharedObj = nil;
         if(responseObject)
         {
             NSMutableDictionary* dict = (NSMutableDictionary*) responseObject;
-            if([[[dict objectForKey:@"data"] objectForKey:@"status"] intValue]==200)
-            {
-                // [[UserBL sharedInstance] parseUserData:[[dict objectForKey:@"data"] objectForKey:@"userData"]];
-                if(completionBlock) completionBlock(responseObject,nil);
-            }
-            else{
-                [APP_DELEGATE hideLoadingBar];
-                
-                if([[dict objectForKey:@"data"] objectForKey:@"message"])
-                    [[CommonBL sharedInstance] showErrorAlertWithMessage:[[dict objectForKey:@"data"] objectForKey:@"message"]];
-            }
+//            if([[[dict objectForKey:@"data"] objectForKey:@"status"] intValue]==200)
+//            {
+                NSMutableArray* categoriesArr = [[CategoriesBL sharedInstance] parseCategoriesArray:[[dict objectForKey:@"data"] objectForKey:@"categories"]];
+                if(completionBlock) completionBlock(categoriesArr,nil);
+//            }
+//            else{
+//                [APP_DELEGATE hideLoadingBar];
+//                
+//                if([[dict objectForKey:@"data"] objectForKey:@"message"])
+//                    [[CommonBL sharedInstance] showErrorAlertWithMessage:[[dict objectForKey:@"data"] objectForKey:@"message"]];
+//            }
+        }
+        else {
+            [APP_DELEGATE hideLoadingBar];
+            if(completionBlock) completionBlock(nil,[NSError errorWithDomain:@"" code:-2000 userInfo:nil]);
+        }
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [APP_DELEGATE hideLoadingBar];
+        if(completionBlock) completionBlock(nil,error);
+    }];
+}
+
+- (void)getHomeCoursesWithParams:(NSMutableDictionary*)params WithCompletionBlock:(void (^)(NSMutableArray *, NSError *))completionBlock {
+    
+    NSString *urlStr=[NSString stringWithFormat:@"%@%@",BASE_URL,HOME_COURSES_URL];
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [manager.requestSerializer setValue:[[NSUserDefaults standardUserDefaults] objectForKey:KEY_TOKEN_ID] forHTTPHeaderField:@"TOKEN"];
+    [manager.requestSerializer setValue:[[NSUserDefaults standardUserDefaults] objectForKey:KEY_SESSION_ID] forHTTPHeaderField:@"SID"];
+    [manager.responseSerializer setAcceptableContentTypes:[NSSet setWithObjects:@"text/html", @"application/json", nil]];
+    
+    [manager POST:urlStr parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        if(responseObject)
+        {
+            NSMutableDictionary* dict = (NSMutableDictionary*) responseObject;
+        
+            if([[dict objectForKey:@"status"] intValue]==200)
+        {
+            NSMutableArray* homeCourseArray = [[CourseBL sharedInstance] parseHomeCourseData:[dict objectForKey:@"data"]];
+            if(completionBlock) completionBlock(homeCourseArray,nil);
+        }
+                        else{
+                            [APP_DELEGATE hideLoadingBar];
+            
+                            if([[dict objectForKey:@"data"] objectForKey:@"message"])
+                                [[CommonBL sharedInstance] showErrorAlertWithMessage:[[dict objectForKey:@"data"] objectForKey:@"message"]];
+                        }
         }
         else {
             [APP_DELEGATE hideLoadingBar];

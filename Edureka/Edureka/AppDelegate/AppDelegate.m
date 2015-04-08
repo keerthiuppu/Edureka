@@ -111,19 +111,19 @@
     EDSettingsVC* edSettingsVC = [[EDSettingsVC alloc] initWithNibName:@"EDSettingsVC" bundle:nil];
     
     edHomeVC.title = @"Home";
-    edHomeVC.tabBarItem.image = [UIImage imageNamed:@"home"];
+    edHomeVC.tabBarItem.image = [UIImage imageNamed:@"home_Tab"];
     
     edMyCourseVC.title=@"My Courses";
-    edMyCourseVC.tabBarItem.image = [UIImage imageNamed:@"myCourse"];
+    edMyCourseVC.tabBarItem.image = [UIImage imageNamed:@"myCourse_Tab"];
     
     edCommunityVC.title = @"Community";
-    edCommunityVC.tabBarItem.image = [UIImage imageNamed:@"ticket"];
+    edCommunityVC.tabBarItem.image = [UIImage imageNamed:@"community_Tab"];
     
     edRedeemVC.title= @"Redeem";
-    edRedeemVC.tabBarItem.image = [UIImage imageNamed:@"forum"];
+    edRedeemVC.tabBarItem.image = [UIImage imageNamed:@"redeem_Tab"];
     
     edSettingsVC.title = @"Settings";
-    edSettingsVC.tabBarItem.image = [UIImage imageNamed:@"more"];
+    edSettingsVC.tabBarItem.image = [UIImage imageNamed:@"settings_Tab"];
     
     UINavigationController* homeNavControl =[[UINavigationController alloc] initWithRootViewController:edHomeVC];
     UINavigationController* myCourseNavControl =[[UINavigationController alloc] initWithRootViewController:edMyCourseVC];
