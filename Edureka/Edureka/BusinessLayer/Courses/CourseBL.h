@@ -16,4 +16,6 @@
 -(NSMutableArray*) getNewCourses;
 -(NSMutableArray*) getTrendingCourses;
 
+-(NSMutableArray*) parseHomeCourseData:(NSMutableArray*) homeCourseArray;
+
 @end

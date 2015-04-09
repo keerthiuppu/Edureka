@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface TicketCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *ticketIDLbl;
+@property (weak, nonatomic) IBOutlet UILabel *ticketTitleLbl;
+@property (weak, nonatomic) IBOutlet UILabel *statusLbl;
+@property (weak, nonatomic) IBOutlet UILabel *postedDataLbl;
+@property (weak, nonatomic) IBOutlet UILabel *descriptionLbl;
 
 @end

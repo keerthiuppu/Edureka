@@ -19,6 +19,13 @@
 
 - (void)logoutUserWithParams:(NSMutableDictionary*)params WithCompletionBlock:(void (^)(NSMutableDictionary *dict, NSError *error))completionBlock;
 
+- (void)ticketWithParams:(NSMutableDictionary*)params WithCompletionBlock:(void (^)(NSMutableDictionary *, NSError *))completionBlock ;
+- (void)forgotPasswordWithParams:(NSMutableDictionary*)params WithCompletionBlock:(void (^)(NSMutableDictionary *dict, NSError *error))completionBlock;
+
+- (void)getCategoriesWithParams:(NSMutableDictionary*)params WithCompletionBlock:(void (^)(NSMutableArray *categoryArray, NSError *error))completionBlock;
+
+- (void)getHomeCoursesWithParams:(NSMutableDictionary*)params WithCompletionBlock:(void (^)(NSMutableArray *courseArray, NSError *error))completionBlock;
+
 
 
 @end

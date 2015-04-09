@@ -16,10 +16,16 @@
 
 #define BASE_URL [KelltonSettings clientServiceURL]
 
-#define AUTH_URL         @"authapi"
-#define LOGIN_URL        @"users/login"
-#define REGISTER_URL     @"users/registration"
-#define LOGOUT_URL       @"users/logout"
+#define AUTH_URL            @"authapi"
+#define LOGIN_URL           @"users/login"
+#define REGISTER_URL        @"users/registration"
+#define LOGOUT_URL          @"users/logout"
+#define FORGOT_PASSWORD_URL @"users/forgotPassword"
+
+#define CATEGORIES_URL      @"courses/getCategories"
+#define HOME_COURSES_URL    @"courses/getNewCourses"
+
+#define TICKET_URL       @"api/1.0/myTickets"
 
 
 #define COLOR_NAVIGATION_BAR   [UIColor colorWithRed:27.0/255.0f green:81.0f/255.0f blue:150.0f/255.0f alpha:1.0f]
@@ -28,7 +34,7 @@
 #define KEY_SESSION_ID      @"SessionId"
 #define KEY_API             @"Edureka2015"
 
-
+#define K_CAROUSEL_OFFSET               111
 #define TAG_CAROUSEL_TYPE_RECOMMENDED   222
 #define TAG_CAROUSEL_TYPE_WISHLIST      223
 #define TAG_CAROUSEL_TYPE_NEW           224
@@ -41,5 +47,14 @@
 #define KEY_USER_ID             @"UserId"
 #define KEY_USER_MOBILE_NO      @"MobileNo"
 #define KEY_USER_SESSION_ID     @"SessionId"
+
+
+#define KEY_TICKET_ID              @"ticketId"
+#define KEY_TICKET_TITLE           @"ticketTitle"
+#define KEY_TICKET_DESCRIPTION     @"description_html"
+#define KEY_TICKET_POSTED_DATE     @"postDate"
+#define KEY_TICKET_STATUS          @"status"
+
+
 
 #endif

@@ -14,14 +14,12 @@
 #import "CourseBL.h"
 #import "Course.h"
 #import "EDSearchVC.h"
+#import "HomeCourse.h"
 
 @interface EDHomeVC ()
 {
     IBOutlet UITableView* courseTabelView;
-    NSMutableArray* newCourseArray;
-    NSMutableArray* trendingCourseArray;
-    NSMutableArray* recommendedCourseArray;
-    NSMutableArray* wishlistCourseArray;
+    NSMutableArray* homeCoursesArray;
 }
 @end
 
@@ -30,34 +28,31 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    newCourseArray = [[NSMutableArray alloc] initWithCapacity:0];
-    trendingCourseArray = [[NSMutableArray alloc] initWithCapacity:0];
-    recommendedCourseArray = [[NSMutableArray alloc] initWithCapacity:0];
-    wishlistCourseArray = [[NSMutableArray alloc] initWithCapacity:0];
-  
-    //==========================================================
-    [newCourseArray removeAllObjects];
-    [newCourseArray addObjectsFromArray:[[CourseBL sharedInstance] getNewCourses]];
-    
-    [trendingCourseArray removeAllObjects];
-    [trendingCourseArray addObjectsFromArray:[[CourseBL sharedInstance] getTrendingCourses]];
-    
-    [recommendedCourseArray removeAllObjects];
-    [recommendedCourseArray addObjectsFromArray:[[CourseBL sharedInstance] getRecommendedCourses]];
-    
-    [wishlistCourseArray removeAllObjects];
-    [wishlistCourseArray addObjectsFromArray:[[CourseBL sharedInstance] getWishlistCourses]];
-    //==========================================================
-
-    
+    homeCoursesArray = [[NSMutableArray alloc] initWithCapacity:0];
     [self configureNavigationBar];
     [self registerCellsForTableView];
-    // Do any additional setup after loading the view from its nib.
+    
+    [self getCourseListing];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void) getCourseListing
+{
+    [APP_DELEGATE showLoadingBar];
+    
+    [[EDOperationHandler sharedInstance] getHomeCoursesWithParams:nil WithCompletionBlock:^(NSMutableArray *courseArray, NSError *error) {
+        //
+        [APP_DELEGATE hideLoadingBar];
+        
+        [homeCoursesArray removeAllObjects];
+        [homeCoursesArray addObjectsFromArray:courseArray];
+        [courseTabelView reloadData];
+    }];
+    
 }
 
 #pragma mark - UI Configuration
@@ -66,6 +61,7 @@
     UINib *nib = [UINib nibWithNibName:@"EDHomeCarouselCell" bundle:[NSBundle mainBundle]];
     [courseTabelView registerNib:nib forCellReuseIdentifier:@"EDHomeCarouselCell"];
     [courseTabelView setTableFooterView:[[UIView alloc] initWithFrame:CGRectZero]];
+    [courseTabelView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
 }
 
 #pragma mark - UInavigationBar Configuration
@@ -73,18 +69,33 @@
     [self addRightMenuButton];
     [self addLeftMenuButton];
     
-    [self.navigationItem setTitleView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"edurekaLogo"]]];
+    UILabel* titleLabel =[[UILabel alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 200.0f, 40.0f)];
+    [titleLabel setText:@"Home"];
+    [titleLabel setTextAlignment:NSTextAlignmentCenter];
+    [titleLabel setTextColor:[UIColor whiteColor]];
+    [titleLabel setFont:[UIFont boldSystemFontOfSize:16.0f]];
+    [self.navigationItem setTitleView:titleLabel];
+//    
+//    [self.navigationItem setTitleView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"edurekaLogo"]]];
 }
 
 - (void)addLeftMenuButton{
     if (self.navigationItem.leftBarButtonItem == nil){
         self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Categories" style:UIBarButtonItemStylePlain target:self action:@selector(categoriesButtonTapped)];
+        UIFont * font = [UIFont systemFontOfSize:14.0f];
+        NSDictionary * attributes = @{NSFontAttributeName: font};
+        [self.navigationItem.leftBarButtonItem setTitleTextAttributes:attributes forState:UIControlStateNormal];
     }
 }
 
 - (void)addRightMenuButton{
-    if (self.navigationItem.rightBarButtonItem == nil){
-        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(searchButtontapped)];
+    if (self.navigationItem.rightBarButtonItem == nil)
+    {
+        UIBarButtonItem* wishListBarButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(searchButtontapped)];
+       
+         UIBarButtonItem* searchBarButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(searchButtontapped)];
+    
+        self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:searchBarButton, wishListBarButton, nil];
     }
 }
 
@@ -103,7 +114,7 @@
 #pragma mark - UITableViewDelegate & Datasource methods
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [[UserBL sharedInstance] isUserLoggedIn] ? 4 : 2;
+    return homeCoursesArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -111,98 +122,30 @@
     static NSString* cellIdentifier= @"EDHomeCarouselCell";
     EDHomeCarouselCell* cell =[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
-    switch (indexPath.row)
-    {
-        case 0:
-        {
-            if ([[UserBL sharedInstance] isUserLoggedIn])
-                [self configureWishlistCell:cell];
-            else
-                [self configureNewCourseCell:cell];
-        }
-            break;
-        case 1:
-        {
-            if ([[UserBL sharedInstance] isUserLoggedIn])
-                [self configureRecommendedCell:cell];
-            else
-                [self configureTrendingCourseCell:cell];
-        }
-            break;
-        case 2:
-        {
-            [self configureNewCourseCell:cell];
-        }
-            break;
-        case 3:
-        {
-            [self configureTrendingCourseCell:cell];
-        }
-            break;
-        default:
-            break;
-    }
+    HomeCourse* homeCourse = [homeCoursesArray objectAtIndex:indexPath.row];
+    [cell.titleLabel setText:homeCourse.categoryName];
+    [cell.carousel setTag:indexPath.row+K_CAROUSEL_OFFSET];
     
     [cell.carousel setDelegate:self];
     [cell.carousel setDataSource:self];
-    
-    [cell.carousel scrollToItemAtIndex:1 animated:NO];
+   
+    if(homeCourse.courseListArray.count>1)
+        [cell.carousel scrollToItemAtIndex:1 animated:NO];
     
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 200.0f;
+    return 225.0f;
 }
 
--(void) configureRecommendedCell:(EDHomeCarouselCell*) cell
-{
-    [cell.carousel setTag:TAG_CAROUSEL_TYPE_RECOMMENDED];
-    [cell.titleLabel setText:@"Recommended Courses"];
-}
-
--(void) configureWishlistCell:(EDHomeCarouselCell*) cell
-{
-    [cell.carousel setTag:TAG_CAROUSEL_TYPE_WISHLIST];
-    [cell.titleLabel setText:@"Wishlist Courses"];
-
-}
-
--(void) configureNewCourseCell:(EDHomeCarouselCell*) cell
-{
-    [cell.carousel setTag:TAG_CAROUSEL_TYPE_NEW];
-    [cell.titleLabel setText:@"New & Noteworthy Courses"];
-
-}
-
--(void) configureTrendingCourseCell:(EDHomeCarouselCell*) cell
-{
-    [cell.carousel setTag:TAG_CAROUSEL_TYPE_TRENDING];
-    [cell.titleLabel setText:@"Trending Courses"];
-
-}
 
 #pragma mark - iCarousel Delegate and DataSource methods
 - (NSInteger)numberOfItemsInCarousel:(iCarousel *)carousel
 {
-    switch (carousel.tag) {
-        case TAG_CAROUSEL_TYPE_RECOMMENDED:
-            return recommendedCourseArray.count;
-            break;
-        case TAG_CAROUSEL_TYPE_WISHLIST:
-            return wishlistCourseArray.count;
-            break;
-        case TAG_CAROUSEL_TYPE_NEW:
-            return newCourseArray.count;
-            break;
-        case TAG_CAROUSEL_TYPE_TRENDING:
-            return trendingCourseArray.count;
-            break;
-        default:
-            return 0;
-            break;
-    }
+    HomeCourse* homeCourse = [homeCoursesArray objectAtIndex:carousel.tag - K_CAROUSEL_OFFSET];
+    return homeCourse.courseListArray.count;
 }
 
 - (UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSInteger)index reusingView:(EDCourseView *)view
@@ -212,36 +155,28 @@
     {
         view = [[[NSBundle mainBundle] loadNibNamed:@"EDCourseView" owner:self options:nil] lastObject];
         view.backgroundColor = [UIColor whiteColor];
+        [view.layer setBorderColor:[UIColor lightGrayColor].CGColor];
+        [view.layer setBorderWidth:1.0f];
     }
     
-    Course* course;
-    switch (carousel.tag)
-    {
-        case TAG_CAROUSEL_TYPE_RECOMMENDED:
-        {
-            course = [recommendedCourseArray objectAtIndex:index];
-        }
-            break;
-        case TAG_CAROUSEL_TYPE_WISHLIST:
-        {
-            course = [wishlistCourseArray objectAtIndex:index];
-        }
-            break;
-        case TAG_CAROUSEL_TYPE_NEW:
-        {
-            course = [newCourseArray objectAtIndex:index];
-        }
-            break;
-        case TAG_CAROUSEL_TYPE_TRENDING:
-        {
-            course = [trendingCourseArray objectAtIndex:index];
-        }
-            break;
-    }
+    HomeCourse* homeCourse = [homeCoursesArray objectAtIndex:carousel.tag - K_CAROUSEL_OFFSET];
+    Course* course = [homeCourse.courseListArray objectAtIndex:index];
 
     [view.courseNameLabel setText:course.courseName];
     [view.courseImageView sd_setImageWithURL:[NSURL URLWithString:course.courseImageUrl] placeholderImage:[UIImage imageNamed:@"edurekaLogo"]];
-
+    [view.learnersLabel setText:[NSString stringWithFormat:@"%@ learners", course.numberOfLearners]];
+    [view.starRatingView setCanEdit:NO];
+    [view.starRatingView setMaxRating:5];
+    [view.starRatingView setRating:[course.rating floatValue]];
+    [view.discountedPriceLabel  setText:[NSString stringWithFormat:@"INR %@", course.discountedPriceINR]];
+   
+    NSMutableAttributedString *attributeString = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"INR %@", course.priceINR]];
+    [attributeString addAttribute:NSStrikethroughStyleAttributeName
+                            value:@2
+                            range:NSMakeRange(0, [attributeString length])];
+    [view.originalPriceLabel  setAttributedText:attributeString];
+    
+    
     
     return view;
     

@@ -9,7 +9,7 @@
 #import "EDCommunityVC.h"
 #import "EDTicketVC.h"
 #import "TicketCell.h"
-
+#import "Ticket.h"
 @interface EDCommunityVC ()
 {
     IBOutlet UITableView* ticketTableView;
@@ -48,9 +48,32 @@
 
 -(IBAction)addTicketButtonTapped:(id)sender
 {
-
+    [self getTicketDetails];
     
     
+}
+-(void)getTicketDetails
+{
+    NSMutableDictionary* paramsDict = [[NSMutableDictionary alloc] initWithCapacity:0];
+    
+    
+    NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+    
+    [paramsDict setObject: [defaults objectForKey:KEY_SESSION_ID] forKey:@"sessionId"];
+    
+    [[EDOperationHandler sharedInstance] ticketWithParams:paramsDict WithCompletionBlock:^(NSMutableDictionary *dict, NSError *error) {
+        if(error)
+        {
+            
+            
+        }
+        
+        else
+        {
+            
+            NSLog(@"%@",dict);
+        }
+    }];
 }
 
 #pragma mark - UI Configuration
@@ -73,7 +96,13 @@
 {
     static NSString* cellIdentifier = @"TicketCell";
     TicketCell* cell =[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+ 
+     
     
+    
+     
+     
+     
     return cell;
 }
 
