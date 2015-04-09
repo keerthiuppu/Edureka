@@ -36,6 +36,19 @@ static CategoriesBL* sharedObj = nil;
 }
 
 
+-(NSMutableArray*) parseCategoriesArray:(NSMutableArray*)categoriesArr
+{
+    NSMutableArray* categoriesArray = [[NSMutableArray alloc] initWithCapacity:0];
+    for(NSMutableDictionary* dict in categoriesArr)
+    {
+        Categories* category = [[Categories alloc] initWithDictionary:dict];
+        [categoriesArray addObject:category];
+    }
+    return categoriesArray;
+
+}
+
+
 
 
 @end

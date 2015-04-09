@@ -10,6 +10,7 @@
 #import "CategoriesBL.h"
 #import "Categories.h"
 #import "CategoryCell.h"
+#import "EDCourseListVC.h"
 
 @interface EDCategoriesVC ()
 {
@@ -21,20 +22,37 @@
 
 @implementation EDCategoriesVC
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     [self configureNavigationBar];
     [self registerCellsForTableView];
-    categoriesArr = [[NSMutableArray alloc] initWithCapacity:0];
-    [categoriesArr removeAllObjects];
-    [categoriesArr addObjectsFromArray:[[CategoriesBL sharedInstance] getAllCategories]];
     
+    categoriesArr = [[NSMutableArray alloc] initWithCapacity:0];
+    [self getCategories];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark -Get Categories Listing
+-(void) getCategories
+{
+    [APP_DELEGATE showLoadingBar];
+    
+    [[EDOperationHandler sharedInstance] getCategoriesWithParams:nil WithCompletionBlock:^(NSMutableArray *categoryArray, NSError *error) {
+        //
+        [APP_DELEGATE hideLoadingBar];
+        [categoriesArr removeAllObjects];
+        [categoriesArr addObjectsFromArray:categoryArray];
+        [categoryTableView reloadData];
+    }];
+
+}
+
+
 
 #pragma mark - UI Configuration
 - (void)registerCellsForTableView
@@ -48,16 +66,27 @@
 
 #pragma mark - UInavigationBar Configuration
 -(void) configureNavigationBar{
-   // [self addRightMenuButton];
+    [self addRightMenuButton];
     [self addLeftMenuButton];
-    self.title = @"Categories";
+    
+    UILabel* titleLabel =[[UILabel alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 200.0f, 40.0f)];
+    [titleLabel setText:@"Course categories"];
+    [titleLabel setTextAlignment:NSTextAlignmentCenter];
+    [titleLabel setTextColor:[UIColor whiteColor]];
+    [titleLabel setFont:[UIFont boldSystemFontOfSize:16.0f]];
+    [self.navigationItem setTitleView:titleLabel];
     
     //[self.navigationItem setTitleView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"edurekaLogo"]]];
 }
 
 - (void)addLeftMenuButton{
-    if (self.navigationItem.leftBarButtonItem == nil){
-        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"backButton"] style:UIBarButtonItemStylePlain target:self action:@selector(backButtonTapped)];
+    if (self.navigationItem.leftBarButtonItem == nil)
+    {
+//        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"backButton"] style:UIBarButtonItemStylePlain target:self action:@selector(backButtonTapped)];
+        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(backButtonTapped)];
+        UIFont * font = [UIFont systemFontOfSize:14.0f];
+        NSDictionary * attributes = @{NSFontAttributeName: font};
+        [self.navigationItem.leftBarButtonItem setTitleTextAttributes:attributes forState:UIControlStateNormal];
     }
 }
 
@@ -72,6 +101,7 @@
 }
 
 -(void) searchButtontapped{
+
 }
 
 #pragma mark - UItableViewDelegate & Datasource
@@ -86,10 +116,7 @@
     CategoryCell* cell =[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     Categories* category =[categoriesArr objectAtIndex:indexPath.row];
-//    [cell.categoryImageView setImageType:@"Category"];
-//    [cell.categoryImageView setImageFromUrlString:category.categoryImageUrl];
-  
-    [cell.categoryImageView sd_setImageWithURL:[NSURL URLWithString:category.categoryImageUrl] placeholderImage:[UIImage imageNamed:@"edurekaLogo"]];
+    [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
 
     [cell.categoryNameLabel setText:category.categoryName];
     
@@ -99,6 +126,12 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     return 64.0f;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    EDCourseListVC* edCourseListVC = [[EDCourseListVC alloc] initWithNibName:@"EDCourseListVC" bundle:nil];
+    [self.navigationController pushViewController:edCourseListVC animated:YES];
 }
 
 @end

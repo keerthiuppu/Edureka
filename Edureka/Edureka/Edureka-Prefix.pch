@@ -8,9 +8,14 @@
 
 #ifndef Edureka_Edureka_Prefix_pch
 #define Edureka_Edureka_Prefix_pch
+#import "KelltonSettings.h"
 #import "AppDelegate.h"
 #import "Constants.h"
+#import <AFNetworking/AFHTTPRequestOperationManager.h>
+#import <AFNetworking/AFHTTPRequestOperation.h>
 #import "UIThumbView.h"
 #import "iCarousel.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "CommonBL.h"
+#import "EDOperationHandler.h"
 #endif

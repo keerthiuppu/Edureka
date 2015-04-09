@@ -7,6 +7,8 @@ target 'Edureka' do
 pod 'AFNetworking', '~> 2.3'
 pod 'iCarousel', '~> 1.8'
 pod 'SDWebImage', '~> 3.7'
+pod 'Facebook-iOS-SDK', '~> 3.17'
+pod 'IOSLinkedInAPI', '~> 2.0.0'
 end
 
 target 'EdurekaTests' do

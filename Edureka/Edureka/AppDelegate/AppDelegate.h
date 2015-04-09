@@ -12,13 +12,18 @@
 {
 
 }
+
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) UITabBarController *tabBarController;
 
 -(void) configureTabBar;
+-(void) navigateToLoginScreen;
 
 -(void) showLoadingBar;
 -(void) hideLoadingBar;
+
+
+-(void) getAppAthToken;
 
 @end
 

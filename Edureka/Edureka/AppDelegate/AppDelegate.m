@@ -11,8 +11,11 @@
 #import "EDHomeVC.h"
 #import "EDMyCourseVC.h"
 #import "EDTicketVC.h"
-#import "EDForumVC.h"
-#import "EDMoreVC.h"
+#import "EDRedeemVC.h"
+#import "EDSettingsVC.h"
+#import "EDCommunityVC.h"
+#import "EDOperationHandler.h"
+#import <FacebookSDK/FacebookSDK.h>
 
 @interface AppDelegate ()
 {
@@ -29,10 +32,14 @@
 {
     [self configureNavigationBar];
     
+  //if(![[CommonBL sharedInstance] isAuthTokenAvailable])
+        [self getAppAthToken];
+
+    
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     EDWelcomeVC* edWelcomeVC = [[EDWelcomeVC alloc] initWithNibName:@"EDWelcomeVC" bundle:nil];
     navController = [[UINavigationController alloc] initWithRootViewController:edWelcomeVC];
-    [self.window addSubview:navController.view];
+    [self.window setRootViewController:navController];
     [self.window makeKeyAndVisible];
     
     return YES;
@@ -59,6 +66,42 @@
     
 }
 
+#pragma mark- Get App Auth Token
+-(void) getAppAthToken
+{
+    NSMutableDictionary* paramsDict = [[NSMutableDictionary alloc] initWithCapacity:0];
+    [paramsDict setObject:KEY_API forKey:@"apikey"];
+    [paramsDict setObject:@"iOS" forKey:@"os"];
+    [paramsDict setObject:[UIDevice currentDevice].model forKey:@"device"];
+    [paramsDict setObject:[[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleShortVersionString"] forKey:@"appversion"];
+    [paramsDict setObject:@"IOS" forKey:@"mobileapptype"];
+    
+    [[EDOperationHandler sharedInstance] getAuthTokenForApp:paramsDict WithCompletionBlock:^(NSMutableDictionary *dict, NSError *error) {
+        //
+        if(error)
+        {
+            [[CommonBL sharedInstance] showErrorAlertWithMessage:[error localizedDescription]];
+        }
+        
+        else
+        {
+            NSLog(@"%@",dict);
+            
+           
+
+        }
+    }];
+}
+
+-(void)getTokenId
+{
+    NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+    NSString *token=[defaults objectForKey:KEY_TOKEN_ID];
+    NSString *sid=[defaults objectForKey:KEY_SESSION_ID];
+    NSLog(@"%@ddff%@",token,sid);
+    
+}
+
 #pragma mark UI Configuration
 -(void) configureNavigationBar
 {
@@ -72,44 +115,51 @@
 
 -(void) configureTabBar
 {
-
+    
     EDHomeVC* edHomeVC = [[EDHomeVC alloc] initWithNibName:@"EDHomeVC" bundle:nil];
     EDMyCourseVC* edMyCourseVC = [[EDMyCourseVC alloc] initWithNibName:@"EDMyCourseVC" bundle:nil];
-    EDTicketVC* edTicketVC = [[EDTicketVC alloc] initWithNibName:@"EDTicketVC" bundle:nil];
-    EDForumVC* edForumVC = [[EDForumVC alloc] initWithNibName:@"EDForumVC" bundle:nil];
-    EDMoreVC* edMoreVC = [[EDMoreVC alloc] initWithNibName:@"EDMoreVC" bundle:nil];
+    EDCommunityVC* edCommunityVC = [[EDCommunityVC alloc] initWithNibName:@"EDCommunityVC" bundle:nil];
+    EDRedeemVC* edRedeemVC = [[EDRedeemVC alloc] initWithNibName:@"EDRedeemVC" bundle:nil];
+    EDSettingsVC* edSettingsVC = [[EDSettingsVC alloc] initWithNibName:@"EDSettingsVC" bundle:nil];
     
     edHomeVC.title = @"Home";
-    edHomeVC.tabBarItem.image = [UIImage imageNamed:@"home"];
+    edHomeVC.tabBarItem.image = [UIImage imageNamed:@"home_Tab"];
     
     edMyCourseVC.title=@"My Courses";
-    edMyCourseVC.tabBarItem.image = [UIImage imageNamed:@"myCourse"];
+    edMyCourseVC.tabBarItem.image = [UIImage imageNamed:@"myCourse_Tab"];
     
-    edTicketVC.title = @"Tickets";
-    edTicketVC.tabBarItem.image = [UIImage imageNamed:@"ticket"];
-
-    edForumVC.title= @"Forum";
-    edForumVC.tabBarItem.image = [UIImage imageNamed:@"forum"];
-
-    edMoreVC.title = @"More";
-    edMoreVC.tabBarItem.image = [UIImage imageNamed:@"more"];
-
+    edCommunityVC.title = @"Community";
+    edCommunityVC.tabBarItem.image = [UIImage imageNamed:@"community_Tab"];
+    
+    edRedeemVC.title= @"Redeem";
+    edRedeemVC.tabBarItem.image = [UIImage imageNamed:@"redeem_Tab"];
+    
+    edSettingsVC.title = @"Settings";
+    edSettingsVC.tabBarItem.image = [UIImage imageNamed:@"settings_Tab"];
+    
     UINavigationController* homeNavControl =[[UINavigationController alloc] initWithRootViewController:edHomeVC];
     UINavigationController* myCourseNavControl =[[UINavigationController alloc] initWithRootViewController:edMyCourseVC];
-    UINavigationController* ticketNavControl =[[UINavigationController alloc] initWithRootViewController:edTicketVC];
-    UINavigationController* forumNavControl =[[UINavigationController alloc] initWithRootViewController:edForumVC];
-    UINavigationController* moreNavControl =[[UINavigationController alloc] initWithRootViewController:edMoreVC];
+    UINavigationController* ticketNavControl =[[UINavigationController alloc] initWithRootViewController:edCommunityVC];
+    UINavigationController* redeemNavControl =[[UINavigationController alloc] initWithRootViewController:edRedeemVC];
+    UINavigationController* settingsNavControl =[[UINavigationController alloc] initWithRootViewController:edSettingsVC];
     
     
     //create an array of all view controllers that will represent the tab at the bottom
-    NSArray *viewControllers = [[NSArray alloc] initWithObjects:homeNavControl, myCourseNavControl,ticketNavControl,forumNavControl, moreNavControl, nil];
+    NSArray *viewControllers = [[NSArray alloc] initWithObjects:homeNavControl, myCourseNavControl,ticketNavControl,redeemNavControl, settingsNavControl, nil];
     //initialize the tab bar controller
     self.tabBarController = [[UITabBarController alloc] init];
     [self.tabBarController setViewControllers:viewControllers];
-    [self.window addSubview:self.tabBarController.view];
+    //[self.window addSubview:self.tabBarController.view];
+   // [navController setNavigationBarHidden:YES];
+    [navController setNavigationBarHidden:YES];
+    [navController pushViewController:self.tabBarController animated:NO];
 }
 
-#pragma mark - Loader
+-(void) navigateToLoginScreen
+{
+    [navController popToRootViewControllerAnimated:YES];
+}
+
 #pragma mark - Loading Bar
 -(void) showLoadingBar
 {
@@ -125,7 +175,7 @@
         //        [loadingView addSubview:activityView];
         
         
-        UIImageView* cabImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"wobbleCab.png"]];
+        UIImageView* cabImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"edurekaLogo"]];
         [cabImageView setCenter:loadingView.center];
         [loadingView addSubview:cabImageView];
         
@@ -161,5 +211,16 @@
     }];
     
 }
+
+#pragma mark - Open URL
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
+    
+    NSLog(@"openURL = %@ sourceApplication= %@",url.absoluteString,sourceApplication);//
+    
+    return [FBAppCall handleOpenURL:url sourceApplication:sourceApplication];
+}
+
+
 
 @end

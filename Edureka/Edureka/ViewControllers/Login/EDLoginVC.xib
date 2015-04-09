@@ -7,6 +7,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EDLoginVC">
             <connections>
+                <outlet property="emailTextField" destination="BJa-c2-w0T" id="Kcj-A1-YlE"/>
+                <outlet property="passwordTextField" destination="maW-N7-tFO" id="O92-di-AXh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,18 +17,53 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email Address" minimumFontSize="17" id="BJa-c2-w0T">
-                    <rect key="frame" x="25" y="105" width="271" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" minimumFontSize="17" id="BJa-c2-w0T">
+                    <rect key="frame" x="25" y="181" width="271" height="35"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="r21-GC-FV4"/>
+                    </connections>
                 </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" id="maW-N7-tFO">
-                    <rect key="frame" x="25" y="153" width="271" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" id="maW-N7-tFO">
+                    <rect key="frame" x="25" y="222" width="271" height="35"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="dQk-1C-T22"/>
+                    </connections>
                 </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in to your Edureka account" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0ft-h0-sf0">
+                    <rect key="frame" x="25" y="82" width="180" height="71"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="24"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" id="jt2-SP-3PS">
+                    <rect key="frame" x="25" y="217" width="271" height="1"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <view contentMode="scaleToFill" id="RxL-ih-1oV">
+                    <rect key="frame" x="25" y="257" width="271" height="1"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="tLn-TN-0xi">
+                    <rect key="frame" x="25" y="275" width="271" height="40"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.10588235294117647" green="0.31764705882352939" blue="0.58823529411764708" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                    <state key="normal" title="Login">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="loginButtonTapped:" destination="-1" eventType="touchUpInside" id="4Fg-mH-ADh"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <point key="canvasLocation" x="139" y="154"/>

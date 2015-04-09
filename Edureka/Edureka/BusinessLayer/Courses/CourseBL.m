@@ -8,6 +8,7 @@
 
 #import "CourseBL.h"
 #import "Course.h"
+#import "HomeCourse.h"
 
 @implementation CourseBL
 
@@ -73,6 +74,28 @@ static CourseBL* sharedObj = nil;
         [courseArray addObject:course];
     }
     return courseArray;
+}
+
+-(NSMutableArray*) parseHomeCourseData:(NSMutableArray*) homeCourseArray
+{
+    NSMutableArray* homeCoursesArr = [[NSMutableArray alloc] initWithCapacity:0];
+    for(NSMutableDictionary* dict in homeCourseArray)
+    {
+        HomeCourse* homeCourse = [[HomeCourse alloc] initWithDictionary:dict];
+        
+        NSMutableArray* courseListArray = [[NSMutableArray alloc] initWithCapacity:0];
+        NSMutableArray* coursesArray = [dict objectForKey:@"courses"];
+        for(NSMutableDictionary* courseDict in coursesArray)
+        {
+            Course* course = [[Course alloc] initWithDictionary:courseDict];
+            [courseListArray addObject:course];
+        }
+        
+        [homeCourse setCourseListArray:courseListArray];
+        [homeCoursesArr addObject:homeCourse];
+    }
+    
+    return homeCoursesArr;
 }
 
 @end

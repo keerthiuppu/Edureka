@@ -11,5 +11,6 @@
 @interface CategoriesBL : NSObject
 +(CategoriesBL*)sharedInstance;
 -(NSMutableArray*) getAllCategories;
+-(NSMutableArray*) parseCategoriesArray:(NSMutableArray*)categoriesArr;
 
 @end

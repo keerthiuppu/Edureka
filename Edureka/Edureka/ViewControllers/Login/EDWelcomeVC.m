@@ -11,6 +11,9 @@
 #import "EDRegisterVC.h"
 #import "EDForgotPasswordVC.h"
 #import "AppDelegate.h"
+#import "FBHandler.h"
+#import "LinkedInHandler.h"
+#import "UserBL.h"
 
 @interface EDWelcomeVC ()
 
@@ -23,7 +26,11 @@
     
     
     [super viewDidLoad];
-    [self configureNavigationBar];
+    
+    if([[UserBL sharedInstance] isUserLoggedIn])
+        [APP_DELEGATE configureTabBar];
+    
+   // [self configureNavigationBar];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -33,9 +40,9 @@
 }
 
 #pragma mark - UInavigationBar Configuration
--(void) configureNavigationBar
+/*-(void) configureNavigationBar
 {
-    [self addRightMenuButton];
+   [self addRightMenuButton];
     
     [self.navigationItem setTitleView:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"edurekaLogo"]]];
     
@@ -45,6 +52,16 @@
     if (self.navigationItem.rightBarButtonItem == nil){
         self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Browse" style:UIBarButtonItemStylePlain target:self action:@selector(browseButtonTapped)];
     }
+} */
+
+- (void)viewWillAppear:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
+    [super viewWillAppear:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
+    [super viewWillDisappear:animated];
 }
 
 -(void) browseButtonTapped
@@ -67,25 +84,40 @@
 
 -(IBAction)facebookLoginButtonTapped:(id)sender
 {
-    
-    [[NSUserDefaults standardUserDefaults] setObject:@"neeraj.sharma@kelltontech.com" forKey:KEY_USER_EMAIL];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    
-    [APP_DELEGATE configureTabBar];
+    [[FBHandler sharedFBHandler] loginFacebookWithSuccessBlock:^(BOOL success) {
+        //
+        [[FBHandler sharedFBHandler] fetchUserInfoWithSuccessBlock:^(NSDictionary *userInfo) {
+            
+            NSLog(@"Fb Usr info--->%@", [userInfo description]);
+            
+            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:APP_NAME message:[NSString stringWithFormat:@"Welcome, %@ %@", [userInfo objectForKey:@"first_name"], [userInfo objectForKey:@"last_name"]] delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+            [alert show];
+            //
+        } failureBlock:^(NSError *error) {
+            //
+        }];
+        
+    } failureBlock:^(NSError *error) {
+        
+        
+    }];
 }
 
 -(IBAction)linkedInLoginButtonTapped:(id)sender
 {
-    [[NSUserDefaults standardUserDefaults] setObject:@"neeraj.sharma@kelltontech.com" forKey:KEY_USER_EMAIL];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    [APP_DELEGATE configureTabBar];
+    [[LinkedInHandler sharedLinkedInHandler] loginLinkedInForAppWithParams:nil WithCompletionBlock:^(NSDictionary *dict, NSError *error) {
+        
+        NSLog(@"LinkedIn User Info--> %@", [dict description]);
+        [[CommonBL sharedInstance] showErrorAlertWithMessage:[NSString stringWithFormat:@"Welcome %@ %@", [dict objectForKey:@"firstName"], [dict objectForKey:@"lastName"]]];
+        //
+    }];
+
 }
 
 -(IBAction)forgotPasswordLoginButtonTapped:(id)sender
 {
     EDForgotPasswordVC* edPasswordVC = [[EDForgotPasswordVC alloc] initWithNibName:@"EDForgotPasswordVC" bundle:nil];
     [self.navigationController pushViewController:edPasswordVC animated:YES];
-
 }
 
 @end
